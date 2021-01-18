@@ -1,6 +1,6 @@
-gamelua.releaseBuild = true
+gamelua.releaseBuild = false
 gamelua.showEditor = false
-gamelua.cheatsEnabled = false
+gamelua.cheatsEnabled = true
 gamelua.useDynamicAssets = false
 gamelua.isPremium = false
 gamelua.g_challengesEnabled = false
