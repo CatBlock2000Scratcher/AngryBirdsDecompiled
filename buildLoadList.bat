@@ -1,0 +1,1 @@
+C:\OpenSSL-Win64\bin\openssl.exe enc -K 55534361505170413454534E56784D49317639534B39554330795A75416E6232 -iv 00 -aes-256-cbc -in "data\images\pcSrc\loadlist.lua" -out "data\images\pc\loadlist.lua"
