@@ -1,3 +1,8 @@
+log = _G.require "log"
+log.outfile = "logs.txt"
+function print(text)
+	log.info(text)
+end
 g_isAccelerometerControl = deviceModel == "roku" or deviceModel == "freebox"
 g_enableHoverScaling = deviceModel == "windows" or deviceModel == "osx" or deviceModel == "roku" or deviceModel == "freebox"
 iapInitTimeOut = 20
@@ -61,7 +66,7 @@ function loadFiles()
   loadLuaFileToObject(scriptPath .. "/subsystems/flurry.lua", this.subsystems, "")
   loadLuaFileToObject(scriptPath .. "/subsystems/loader.lua", this.subsystems, "")
   if showEditor then
-    loadLuaFile(scriptPath .. "/../editor/editor.lua", "")
+    loadLuaFile(scriptPath .. "/editor/editor.lua", "")
   else
     function updateEditor()
     end

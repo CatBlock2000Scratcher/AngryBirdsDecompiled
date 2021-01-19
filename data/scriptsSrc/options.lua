@@ -1,5 +1,5 @@
 gamelua.releaseBuild = false
-gamelua.showEditor = false
+gamelua.showEditor = true
 gamelua.cheatsEnabled = true
 gamelua.useDynamicAssets = false
 gamelua.isPremium = false
