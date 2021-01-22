@@ -430,6 +430,13 @@ function levelCrypt(levelFolder, levelName)
 	_G.os.execute("buildLevelEditor.bat " .. levelFolderWin .. " " .. levelName .. ".lua")
 end
 
+function saveLevelSrc(levelFolder, levelName)
+	local levelSrcFolder = _G.string.gsub(levelFolder, "levels", "levelsSrc")
+	saveLevel(levelSrcFolder .. levelName)
+	local levelFolderWin = _G.string.gsub(levelSrcFolder, "/", "\\")
+	_G.os.execute("echo. filename = " .. '"' .. levelName .. '.lua"' .. " >> data\\" .. levelFolderWin .. levelName .. ".lua")
+end
+
 function updateEditor(dt, time)
 	
 	if not editorJointPage then
@@ -560,6 +567,8 @@ function updateEditor(dt, time)
 		print("levelFolder: " .. _G.tostring(levelFolder) .. "\n")
 		print("levelName: " .. _G.tostring(levelName) .. "\n")
 		checkDirectories()
+		
+		saveLevelSrc(levelFolder, levelName)
 		saveLevel(levelFolder .. levelName)
 		levelCrypt(levelFolder, levelName)
 		saveLevel(levelFolder .. "temp/" .. levelName .. ".temp")
