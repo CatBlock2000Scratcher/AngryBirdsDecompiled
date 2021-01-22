@@ -4953,7 +4953,7 @@ function restartLevelIngame(hiddenLoading)
     })
   end
 end
-function handleGameModeChange(page, selectedMenuItem)
+--[[function handleGameModeChange(page, selectedMenuItem)
   if currentGameMode == updateEditor then
     _G.res.stopAudio(currentMainMenuSong)
     levelName = page.items[selectedMenuItem].filename
@@ -4967,7 +4967,7 @@ function handleGameModeChange(page, selectedMenuItem)
     currentPageNumber = page.pageNumber or currentPageNumber
     loadLevelInternal(levelFolder .. levelName)
   end
-end
+end]]
 function checkLogLevelNotCompleted()
   if highscores ~= nil and levelName ~= nil and startedFromEditor ~= true then
     local levelNotCompleted = highscores[levelName] == nil
