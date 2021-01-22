@@ -46,3 +46,4 @@ Enable "Show Collision boxes" Select Bird or Pig and Hold Shift + Ctrl + W: Decr
 Draw One Layer Mode:
 Ctrl + Mouse Wheel: Switch Layer
 
+To move slingshot, move Bird with First Launch Order And Press Shift + P to play level then exit play mode.
