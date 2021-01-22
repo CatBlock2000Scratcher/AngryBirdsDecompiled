@@ -1,0 +1,48 @@
+Hold Spacebar + Hold Left Mouse Button: Move Camera
+Ctrl + S: Save Level
+Tab: Enable/Disable Physics
+Select Objects and Ctrl + C: Copy Selected Objects
+Select Two Objects and Shift + J: Joint Editor
+Select Bird and Press 1 .. 9: Set Bird Launch Order from 1 to 9
+L: Indicate Bird Launch Order
+Shift + B: Set Bird Camera location and zoom
+Shift + C: Set Castle Camera location and zoom
+Ctrl + Shift + B: Check Bird Camera location and zoom
+Ctrl + Shift + C: Check Castle Camera location and zoom
+Ctrl + P: Particle Editor
+Shift + P: Play Level!
+Select Objects and Enter key + arrow buttons: Allign Selected Objects
+O: Indicate Origin
+8: Show Collision boxes
+0: Draw One Layer
+Select Objects and Shift + R/Shift + Ctrl + R: Rotate Objects
+Select Objects and Ctrl + Shift + Hold Right Mouse Button: Rotate Objects
+Select Objects and Press Arrow keys: Move Objects
+Select Objects and Hold Left Mouse Button: Move Objects
+Right Mouse Click: Select Objects
+Hold Right Mouse Button and Drag: Select Multiple Objects
+Shift + Right Mouse Click: Select Multiple Objects
+Select Objects and Ctrl + Arrow Key: Mirror Objects
+
+
+Shift + T: Change Theme
+
+This List from Blocks.lua
+1 or 2: Select Stone Objects
+3 or 4: Select Birds
+5 or 6: Select Extra Objects
+Q or W: Select Wood Objects
+E or R: Select Pigs
+T or Y: Select Platforms
+A or S: Select Glass Objects
+H or J: Select Cloud Objects
+Z or X: Select Static Blocks
+V or C: Select Decorations (has few invisible objects)
+N or M: Select Static Fragile Blocks
+
+Enable "Show Collision boxes" Select Bird or Pig and Hold Shift + W: Increase Radius? (idk what it does)
+Enable "Show Collision boxes" Select Bird or Pig and Hold Shift + Ctrl + W: Decrease Radius? (idk what it does)
+
+Draw One Layer Mode:
+Ctrl + Mouse Wheel: Switch Layer
+
