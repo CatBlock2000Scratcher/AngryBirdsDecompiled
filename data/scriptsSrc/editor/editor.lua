@@ -561,7 +561,7 @@ function updateEditor(dt, time)
 		print("levelName: " .. _G.tostring(levelName) .. "\n")
 		checkDirectories()
 		saveLevel(levelFolder .. levelName)
-		--levelCrypt(levelFolder, levelName)
+		levelCrypt(levelFolder, levelName)
 		saveLevel(levelFolder .. "temp/" .. levelName .. ".temp")
 		levelCrypt(levelFolder .. "temp/", levelName .. ".temp")
 		levelSaved = true
