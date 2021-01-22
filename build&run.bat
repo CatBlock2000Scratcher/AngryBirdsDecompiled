@@ -5,9 +5,10 @@ rmdir /s /q data\scripts
 
 rem thx stackoverflow for this script
 
+set mypath=%~dp0
 set "openssl=C:\OpenSSL-Win64\bin\openssl.exe"
-set "SourcePath=C:\AngryBirds\data\scriptsSrc"
-set "TargetPath=C:\AngryBirds\data\scripts"
+set "SourcePath=%mypath%data\scriptsSrc"
+set "TargetPath=%mypath%data\scripts"
 
 if not "%~1" == "" set "SourcePath=%~1"
 if not "%~2" == "" set "TargetPath=%~2"
@@ -28,6 +29,8 @@ for /R "%SourcePath%" %%I in (*) do (
     md "%TargetPath%!RelativePath!" 2>nul
 	%openssl% enc -K 55534361505170413454534E56784D49317639534B39554330795A75416E6232 -iv 00 -aes-256-cbc -in "%%I" -out "%TargetPath%!RelativePath!\%%~nxI"
 )
+
+%openssl% enc -K 55534361505170413454534E56784D49317639534B39554330795A75416E6232 -iv 00 -aes-256-cbc -in "data\images\pcSrc\loadlist.lua" -out "data\images\pc\loadlist.lua"
 endlocal
 
 start AngryBirds.exe

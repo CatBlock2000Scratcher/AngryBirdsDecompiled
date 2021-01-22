@@ -5,9 +5,10 @@ rmdir /s /q data\levels
 
 rem thx stackoverflow for this script
 
+set mypath=%~dp0
 set "openssl=C:\OpenSSL-Win64\bin\openssl.exe"
-set "SourcePath=C:\AngryBirds\data\levelsSrc"
-set "TargetPath=C:\AngryBirds\data\levels"
+set "SourcePath=%mypath%data\levelsSrc"
+set "TargetPath=%mypath%data\levels"
 
 if not "%~1" == "" set "SourcePath=%~1"
 if not "%~2" == "" set "TargetPath=%~2"
