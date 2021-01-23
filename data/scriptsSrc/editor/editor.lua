@@ -432,6 +432,9 @@ end
 
 function saveLevelSrc(levelFolder, levelName)
 	local levelSrcFolder = _G.string.gsub(levelFolder, "levels", "levelsSrc")
+	if not checkDirectory(levelSrcFolder) then
+		createDirectory(levelSrcFolder)
+	end
 	saveLevel(levelSrcFolder .. levelName)
 	local levelFolderWin = _G.string.gsub(levelSrcFolder, "/", "\\")
 	_G.os.execute("echo. filename = " .. '"' .. levelName .. '.lua"' .. " >> data\\" .. levelFolderWin .. levelName .. ".lua")
