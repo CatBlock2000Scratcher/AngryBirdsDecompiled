@@ -168,10 +168,12 @@ function loadMattelAssets()
   })
   gamelua.createAudio({
     fileName = gamelua.audioPath .. "/sfx/kingpig/pig_launch",
+	extension = "mp3",
     clipName = "pig launch"
   })
   gamelua.createAudio({
     fileName = gamelua.audioPath .. "/sfx/kingpig/pig_special_02",
+	extension = "mp3",
     clipName = "pig special"
   })
   gamelua.loadAssets({

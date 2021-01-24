@@ -176,6 +176,28 @@ assetLoadList = {
         0
       }
     },
+	MATTEL_INGAME = {
+      {
+        "MATTEL_INGAME_INGAME_1.dat",
+        0
+      }
+    },
+    MATTEL_SPLASH = {
+      {
+        "MATTEL_SPLASH_ELEMENTS_1.dat",
+        0
+      },
+      {
+        "MATTEL_SPLASH_ELEMENTS_2.dat",
+        0
+      }
+    },
+    MATTEL_STARBLEND = {
+      {
+        "MATTEL_STARBLEND_ELEMENTS_1.dat",
+        0
+      }
+    },
     MENU = {
       {
         "MENU_ACTIVATE_POPUP_1.dat",
