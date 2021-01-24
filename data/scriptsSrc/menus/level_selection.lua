@@ -443,7 +443,7 @@ function LevelScrollFrame:init()
       coming_soon:setImage("LS_COMING_SOON")
       self:addChild(coming_soon)
     end
-    if (deviceModel == "ipad" or deviceModel == "ipad3") and self.episode == "G" and i == 2 then
+    if (deviceModel == "ipad" or deviceModel == "ipad3" or deviceModel == "android" or deviceModel == "windows" or deviceModel == "osx") and self.episode == "G" and i == 2 then
       local kingpig_button = ui.ImageButton:new()
       kingpig_button.name = "kingpig_button"
       kingpig_button:setImage("MATTEL_GOLDENEGGS_SELECT")
@@ -574,7 +574,7 @@ function LevelScrollFrame:onEntry()
     end
     levels = levels + #page.levels
   end
-  if self.episode == "G" and (deviceModel == "ipad" or deviceModel == "ipad3") then
+  if self.episode == "G" and (deviceModel == "ipad" or deviceModel == "ipad3" or deviceModel == "android" or deviceModel == "windows" or deviceModel == "osx") then
     local kingpig_button = self:getChild("kingpig_button")
     local eps = {
       1,
@@ -622,7 +622,7 @@ function LevelScrollFrame:layout()
         have_page_2_egg = true
       end
     end
-    if deviceModel == "ipad" or deviceModel == "ipad3" then
+    if deviceModel == "ipad" or deviceModel == "ipad3" or deviceModel == "android" or deviceModel == "windows" or deviceModel == "osx" then
       local kingpig_button = self:getChild("kingpig_button")
       kingpig_button.x = screenWidth * 1.15
       kingpig_button.y = screenHeight * 0.19
