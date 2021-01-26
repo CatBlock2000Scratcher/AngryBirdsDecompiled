@@ -265,7 +265,7 @@ materials = {
   }
 }
 themes = {
-  settings = {keyCode = "T", themeAmount = 18},
+  settings = {keyCode = "T", themeAmount = 20},
   theme1 = {
     index = 1,
     music = "ambient_theme1",
