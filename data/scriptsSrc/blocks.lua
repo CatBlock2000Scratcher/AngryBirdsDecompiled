@@ -1619,7 +1619,7 @@ themes = {
         1.2
       }
     },
-    effects = { --TODO
+    effects = {
       {
         type = "Thunder",
         params = {

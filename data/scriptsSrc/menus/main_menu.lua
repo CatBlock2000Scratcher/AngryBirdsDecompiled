@@ -89,6 +89,7 @@ function MainMenuRoot:layout()
   self.camera_top = topCamera
   setWorldScale(worldScale)
   setTheme(self.current_theme)
+  setLevelEffects(self.current_theme)
   ui.Frame.layout(self)
 end
 function MainMenuRoot:draw(x, y, scaleX, scaleY, angle)
@@ -132,6 +133,7 @@ function MainMenuRoot:update(dt, time)
   if _G.res.isAudioPlaying(currentMainMenuSong) == false and currentMainMenuSong ~= nil then
     _G.res.playAudio(currentMainMenuSong, 0.8, true, 7)
   end
+  updateLevelEffects(dt, time)
 end
 function MainMenuRoot:animateBirds(dt)
   local itemsPerCategory = 0.75

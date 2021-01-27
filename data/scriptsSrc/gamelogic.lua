@@ -83,6 +83,7 @@ function loadFiles()
   end
   loadLuaFile(scriptPath .. "/menus/ProcessManager.lua", "")
   loadLuaFile(scriptPath .. "/menus/cutscene.lua", "")
+  loadLuaFile(scriptPath .. "/level_effects.lua", "")
   loadLuaFile(scriptPath .. "/settingsWrapper.lua", "")
   if g_challengesEnabled then
     loadLuaFile(scriptPath .. "/challenges/challenges.lua", "")
@@ -3127,6 +3128,22 @@ function createAssets()
     alwaysStream = true,
     clipName = "rain_ambience"
   })
+  createAudio({
+    fileName = audioPath .. "/sfx/Lightning01",
+    clipName = "Lightning01"
+  })
+  createAudio({
+    fileName = audioPath .. "/sfx/Lightning02",
+    clipName = "Lightning02"
+  })
+  createAudio({
+    fileName = audioPath .. "/sfx/Lightning03",
+    clipName = "Lightning03"
+  })
+  createAudio({
+    fileName = audioPath .. "/sfx/Lightning04",
+    clipName = "Lightning04"
+  })
   audioGroups = {
     bird_01_collision = {
       "bird 01 collision a1",
@@ -3337,6 +3354,12 @@ function createAssets()
     birthday_cake = {
       "birthday_cake1",
       "birthday_cake2"
+    },
+	lightning = {
+      "Lightning01",
+      "Lightning02",
+      "Lightning03",
+      "Lightning04"
     }
   }
   currentMainMenuSong = "title_theme"
@@ -5961,6 +5984,7 @@ function loadLevelInternal(levelFileName)
   end
   setTheme(currentTheme)
   print("Theme set\n")
+  setLevelEffects(currentTheme)
   themeSpriteObjects = {}
   if loadedObjects.world ~= nil then
     for k, v in _G.pairs(loadedObjects.world) do
@@ -7841,6 +7865,9 @@ function updateGame(dt, time)
   updateCharacterAnimations(dt)
   updateFloatingScores(dt)
   updateScore(dt)
+  if isPhysicsEnabled() then
+    updateLevelEffects(dt, time)
+  end
   oldCursor.x = cursor.x
   oldCursor.y = cursor.y
   drawGame()
