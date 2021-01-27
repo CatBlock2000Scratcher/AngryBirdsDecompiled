@@ -3459,7 +3459,7 @@ function update(dt, realDt)
     if keyHold.SHIFT and keyPressed.C then
       iapEnabled = not iapEnabled
     end
-	if (keyHold.SHIFT and keyPressed.D) or DebugConsole.gestureActivation() and not DebugConsole.isDebugConsoleOpen() then
+	if ((keyHold.SHIFT and keyPressed.D) or DebugConsole.gestureActivation()) and not DebugConsole.isDebugConsoleOpen() then
       notificationsFrame:addChild(DebugConsole.DebugConsole:new())
     end
     if keyHold.M and keyPressed.E or keyPressed.M and keyHold.E then
