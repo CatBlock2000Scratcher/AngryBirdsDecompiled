@@ -102,6 +102,9 @@ function loadFiles()
   if deviceModel == "osx" then
     loadLuaFileToObject(scriptPath .. "/trackpad.lua", this, "OSX")
   end
+  if cheatsEnabled then
+    loadLuaFileToObject(commonScriptPath .. "/menus/DebugConsole.lua", this, "DebugConsole")
+  end
 end
 loadFiles()
 loadlist = {}
@@ -3455,6 +3458,9 @@ function update(dt, realDt)
     end
     if keyHold.SHIFT and keyPressed.C then
       iapEnabled = not iapEnabled
+    end
+	if (keyHold.SHIFT and keyPressed.D) or DebugConsole.gestureActivation() and not DebugConsole.isDebugConsoleOpen() then
+      notificationsFrame:addChild(DebugConsole.DebugConsole:new())
     end
     if keyHold.M and keyPressed.E or keyPressed.M and keyHold.E then
       settingsWrapper:setMightyEagleEnabled()
