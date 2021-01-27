@@ -1727,4 +1727,94 @@ worldS3_complete = {
   },
   {time = 12.5, action = "end"}
 }
+pack9_intro = {
+  {
+    time = 0,
+    action = "setreferencesize",
+    image = "STORY_GREEN_BEGINNING",
+    width = 2655,
+    height = 655
+  },
+  {
+    time = 0,
+    action = "fitheight",
+    image = "STORY_GREEN_BEGINNING"
+  },
+  {
+    time = 0,
+    action = "playsound",
+    sound = "birds_intro",
+    loop = false,
+    volume = 1,
+    track = 1
+  },
+  {
+    time = 0,
+    action = "createsprite",
+    name = "background",
+    image = "STORY_GREEN_BEGINNING",
+    x = 0,
+    y = 0,
+    z = 0
+  },
+  {
+    time = 3.5,
+    action = "scroll",
+    duration = 9.6,
+    type = "cubic_in_out",
+    scroll_cursor = {x = 1, y = 0},
+    scroll_target = {
+      type = "sprite",
+      sprite = "background",
+      x = 0.9,
+      y = 0
+    }
+  },
+  {time = 15.6, action = "end"}
+}
+world19_complete = {
+  {
+    time = 0,
+    action = "fitheight",
+    image = "STORY_GREEN_MIDDLE"
+  },
+  {
+    time = 0,
+    action = "setreferencesize",
+    image = "STORY_GREEN_MIDDLE",
+    width = 1438,
+    height = 659
+  },
+  {
+    time = 0,
+    action = "playsound",
+    sound = "birds_boss",
+    loop = false,
+    volume = 1,
+    track = 1
+  },
+  {
+    time = 0,
+    action = "createsprite",
+    name = "background",
+    image = "STORY_GREEN_MIDDLE",
+    x = 0,
+    y = 0,
+    z = 0
+  },
+  {
+    time = 3.5,
+    action = "scroll",
+    duration = 2,
+    type = "cubic_in_out",
+    scroll_cursor = {x = 1, y = 0},
+    scroll_target = {
+      type = "sprite",
+      sprite = "background",
+      x = 1,
+      y = 0
+    }
+  },
+  {time = 7.5, action = "end"}
+}
 filename = "cutscenes.lua"

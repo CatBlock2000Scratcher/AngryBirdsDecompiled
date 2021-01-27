@@ -1,3 +1,14 @@
+collider_types = {--TODO
+  default = 0,
+  mighty_eagle = 1,
+  immovable = 2,
+  wind = 3
+}
+shape_types = {
+  box = 0,
+  circle = 1,
+  polygon = 2
+}
 materials = {
   balloon = {
     strength = 30,
@@ -11,7 +22,6 @@ materials = {
     collisionSound = "",
     damageSound = "",
     destroyedSound = "balloon_pop",
-    rollingSound = "",
     forceY = -30,
     forceX = -1
   },
@@ -84,7 +94,8 @@ materials = {
     density = 0,
     controllable = false,
     particles = "smokeBuff",
-    collisionSound = "ground_collision"
+    collisionSound = "ground_collision",
+    collider_type = collider_types.immovable
   },
   immovableFragile = {
     strength = 2,
@@ -189,8 +200,7 @@ materials = {
     particles = "lightBuff",
     collisionSound = "",
     damageSound = "",
-    destroyedSound = "",
-    rollingSound = ""
+    destroyedSound = ""
   },
   stalaktite = {
     strength = 20,
@@ -262,10 +272,17 @@ materials = {
     particles = "smokeBuff",
     collisionSound = "ground_collision",
     destroyedSound = "birthday_cake"
+  },
+  wind = {--TODO
+    friction = 0,
+    restitution = 0,
+    density = 0,
+    controllable = false,
+    collider_type = collider_types.wind
   }
 }
 themes = {
-  settings = {keyCode = "T", themeAmount = 21},
+  settings = {keyCode = "T", themeAmount = 22},
   theme1 = {
     index = 1,
     music = "ambient_theme1",
@@ -274,6 +291,10 @@ themes = {
       "THEME_01_COMPOSPRITES"
     },
     texture = "THEME_01_THEME_GROUND_1",
+	playButtonSprite = {--TODO?
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "INGAME_SKIES_1",
@@ -323,6 +344,10 @@ themes = {
       "THEME_02_COMPOSPRITES"
     },
     texture = "THEME_02_THEME_GROUND_2",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "INGAME_SKIES_1",
@@ -372,6 +397,10 @@ themes = {
       "THEME_03_COMPOSPRITES"
     },
     texture = "THEME_03_THEME_GROUND_3",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "INGAME_SKIES_1",
@@ -421,6 +450,10 @@ themes = {
       "THEME_04_COMPOSPRITES"
     },
     texture = "THEME_04_THEME_GROUND_4",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "INGAME_SKIES_1",
@@ -470,6 +503,10 @@ themes = {
       "THEME_05_COMPOSPRITES"
     },
     texture = "THEME_05_THEME_GROUND_5",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "INGAME_SKIES_1",
@@ -519,6 +556,10 @@ themes = {
       "THEME_06_COMPOSPRITES"
     },
     texture = "THEME_06_THEME_GROUND_6",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "INGAME_SKIES_2",
@@ -568,6 +609,10 @@ themes = {
       "THEME_07_COMPOSPRITES"
     },
     texture = "THEME_07_THEME_GROUND_7",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "INGAME_SKIES_2",
@@ -617,6 +662,10 @@ themes = {
       "THEME_08_COMPOSPRITES"
     },
     texture = "THEME_08_THEME_GROUND_8",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "INGAME_SKIES_2",
@@ -667,6 +716,10 @@ themes = {
       "PARALLAX_CRANES"
     },
     texture = "THEME_01_THEME_GROUND_1",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "",
@@ -749,6 +802,10 @@ themes = {
       "PARALLAX_CRANES"
     },
     texture = "THEME_02_THEME_GROUND_2",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "INGAME_SKIES_1",
@@ -831,6 +888,10 @@ themes = {
       "PARALLAX_CRANES"
     },
     texture = "THEME_03_THEME_GROUND_3",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "INGAME_SKIES_1",
@@ -913,6 +974,10 @@ themes = {
       "PARALLAX_CRANES"
     },
     texture = "THEME_04_THEME_GROUND_4",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "INGAME_SKIES_1",
@@ -990,6 +1055,10 @@ themes = {
     index = 13,
     music = "construction_theme1",
     texture = "THEME_05_THEME_GROUND_5",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     graphicSetName = {
       "THEME_05",
       "THEME_05_COMPOSPRITES",
@@ -1077,6 +1146,10 @@ themes = {
       "PARALLAX_CRANES"
     },
     texture = "THEME_06_THEME_GROUND_6",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "INGAME_SKIES_2",
@@ -1159,6 +1232,10 @@ themes = {
       "PARALLAX_CRANES"
     },
     texture = "THEME_07_THEME_GROUND_7",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "INGAME_SKIES_2",
@@ -1240,6 +1317,10 @@ themes = {
       "THEME_09_COMPOSPRITES"
     },
     texture = "THEME_09_THEME_GROUND_9",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "INGAME_SKIES_2",
@@ -1285,6 +1366,10 @@ themes = {
       "THEME_10_COMPOSPRITES"
     },
     texture = "THEME_10_THEME_GROUND_CAVE",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "",
@@ -1324,6 +1409,10 @@ themes = {
       "THEME_11_COMPOSPRITES"
     },
     texture = "THEME_11_THEME_GROUND_BIRTHDAY",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "",
@@ -1370,6 +1459,10 @@ themes = {
       "BLOCKS_FB"
     },
     texture = "THEME_12_THEME_GROUND_12",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "",
@@ -1418,6 +1511,10 @@ themes = {
       "BLOCKS_FB"
     },
     texture = "THEME_13_THEME_GROUND_13",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "",
@@ -1473,6 +1570,10 @@ themes = {
 	  "BLOCKS_FB"
 	},
     texture = "THEME_15_THEME_GROUND_15", 
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
     bgLayers = {
       {
         "",
@@ -1518,7 +1619,7 @@ themes = {
         1.2
       }
     },
-    effects = {
+    effects = { --TODO
       {
         type = "Thunder",
         params = {
@@ -1538,6 +1639,189 @@ themes = {
       b = 34
     },
     mainMenuScale = 2.5
+  },
+  theme22 = {
+    index = 999,
+    music = "beach_ambience",
+    graphicSetName = {
+      "THEME_14",
+      "BLOCKS_ABLAND"
+    },
+    texture = "THEME_14_THEME_GROUND_14",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
+    bgLayers = {
+      {
+        "",
+        "BACKGROUND_16_LAYER_1",
+        1.0E-5,
+        1.5
+      },
+      {
+        "",
+        "THEME_14_BG_SUN",
+        0,
+        1
+      },
+      {
+        "",
+        "THEME_14_BG_LAYER_4_2",
+        0.1,
+        1,
+        v = 80
+      },
+      {
+        "",
+        "THEME_14_BG_LAYER_4",
+        0.1,
+        1.2,
+        v = 180
+      },
+      {
+        "",
+        "THEME_14_BG_LAYER_3",
+        0.2,
+        0.8
+      },
+      {
+        "",
+        "THEME_14_BG_LAYER_2",
+        0.4,
+        1.1
+      },
+      {
+        "",
+        "THEME_14_BG_LAYER_1",
+        0.65,
+        1
+      },
+      {
+        "",
+        "THEME_14_BG_LAYER_1_2",
+        0.9,
+        1
+      }
+    },
+    fgLayers = {
+      {
+        "",
+        "FOREGROUND_16_LAYER_1"
+      }
+    },
+    color = {
+      r = 173,
+      g = 210,
+      b = 222
+    },
+    groundColor = {
+      r = 17,
+      g = 17,
+      b = 17
+    }
+  },
+  theme23 = {
+    index = 22,
+    music = "beach_ambience",
+    graphicSetName = {
+      "THEME_16",
+      "BLOCKS_GREEN"
+    },
+    texture = "THEME_16_THEME_16_GROUND",
+    playButtonSprite = {
+      group = "TEXTS_BASIC",
+      id = "TEXT_PLAY_SPRITE"
+    },
+    bgLayers = {
+      {
+        "",
+        "INGAME_SKIES_16",
+        0,
+        2
+      },
+      {
+        "",
+        "THEME_16_BG_LAYER_3",
+        0.05,
+        2.4,
+        v = -150
+      },
+      {
+        "",
+        "THEME_16_BG_LAYER_2",
+        0.1,
+        1.9,
+        v = -200
+      },
+      {
+        "",
+        "THEME_16_BACKGROUND_LAYER_2",
+        0.2,
+        2.6
+      },
+      {
+        "",
+        "THEME_16_BACKGROUND_LAYER_1",
+        0.5,
+        2.3
+      },
+      {
+        "",
+        "THEME_16_BG_LAYER_1",
+        0.9,
+        0.8
+      }
+    },
+    fgLayers = {
+      {
+        "",
+        "THEME_16_FOREGROUND_SAND"
+      },
+      {
+        "",
+        "THEME_16_FOREGROUND_FOAM",
+        1,
+        1,
+        v = -5
+      },
+      {
+        "",
+        "THEME_16_FOREGROUND_SEA",
+        1,
+        1,
+        v = -5
+      }
+    },
+    effects = {
+      {
+        type = "Waves",
+        params = {
+          water_layer = {
+            index = 3,
+            sprite = "THEME_16_FOREGROUND_SEA"
+          },
+          foam_layer = {
+            index = 2,
+            sprite = "THEME_16_FOREGROUND_FOAM"
+          },
+          ground_layer = {
+            index = 1,
+            sprite = "THEME_16_FOREGROUND_SAND"
+          }
+        }
+      }
+    },
+    color = {
+      r = 53,
+      g = 174,
+      b = 198
+    },
+    groundColor = {
+      r = 68,
+      g = 170,
+      b = 153
+    }
   }
 }
 groups = {
@@ -1581,7 +1865,7 @@ groups = {
     keyUp = "6",
     keyDown = "5",
     firstIndex = 1,
-    lastIndex = 80
+    lastIndex = 94
   },
   decorations = {
     keyUp = "V",
@@ -1606,6 +1890,12 @@ groups = {
     keyDown = "J",
     firstIndex = 1,
     lastIndex = 9
+  },
+  winds = {
+    keyUp = "I",
+    keyDown = "U",
+    firstIndex = 1,
+    lastIndex = 2
   }
 }
 damageFactors = {
@@ -6489,6 +6779,111 @@ blocks = {
         min = 0
       }
     }
+  },
+  HORSE_BASE = {
+    type = "box",
+    sprite = "BLOCK_HORSE_BASE",
+    material = "extras",--TODO materialName
+    group = "extras",
+    groupIndex = 88,
+    controllable = false,
+    strength = 80
+  },
+  BLOCK_GREEN_GOGGLES = {
+    type = "box",
+    width = 2,
+    height = 1,
+    sprite = "BLOCK_GREEN_GOGGLES",
+    material = "extras",
+    group = "extras",
+    density = 0.1,
+    friction = 1,
+    groupIndex = 89,
+    defence = 20,
+    strength = 10,
+    restitution = 0,
+    z_order = 5,
+    destroyedScoreInc = 100
+  },
+  BLOCK_GREEN_PILOTHELMET = {
+    type = "box",
+    width = 2,
+    height = 1,
+    sprite = "BLOCK_GREEN_PILOTHELMET",
+    material = "extras",
+    group = "extras",
+    density = 0.1,
+    friction = 1,
+    groupIndex = 90,
+    defence = 20,
+    strength = 10,
+    restitution = 0,
+    z_order = 5,
+    destroyedScoreInc = 100
+  },
+  BLOCK_GREEN_SPANNER_2 = {
+    type = "box",
+    width = 1,
+    height = 4,
+    sprite = "BLOCK_GREEN_SPANNER_2",
+    material = "extras",
+    group = "extras",
+    density = 0.1,
+    friction = 1,
+    groupIndex = 91,
+    defence = 20,
+    strength = 10,
+    restitution = 0,
+    z_order = 5,
+    destroyedScoreInc = 100
+  },
+  GoldenSpanner = {
+    type = "box",
+    width = 1,
+    height = 4,
+    sprite = "BLOCK_GREEN_SPANNER_GOLDEN",
+    material = "extras",
+    group = "extras",
+    density = 0.1,
+    friction = 1,
+    groupIndex = 92,
+    defence = 2,
+    strength = 10,
+    restitution = 0,
+    z_order = 5,
+    destroyedScoreInc = 3000,
+    spriteScore = "GEM_SCORE_AMBER_1"
+  },
+  BLOCK_GREEN_OILCANISTER = {
+    type = "box",
+    width = 1.5,
+    height = 2.7,
+    sprite = "BLOCK_GREEN_OILCANISTER",
+    material = "extras",
+    group = "extras",
+    density = 0.1,
+    friction = 1,
+    groupIndex = 93,
+    defence = 20,
+    strength = 10,
+    restitution = 0,
+    z_order = 5,
+    destroyedScoreInc = 100
+  },
+  BLOCK_GREEN_BAG = {
+    type = "circle",
+    radius = 1.3,
+    sprite = "BLOCK_GREEN_BAG",
+    material = "extras",
+    group = "extras",
+    density = 0.1,
+    friction = 1,
+    groupIndex = 94,
+    defence = 20,
+    strength = 10,
+    restitution = 0,
+    z_order = 5,
+    destroyedScoreInc = 100
   }
 }
 filename = "blocks.lua"

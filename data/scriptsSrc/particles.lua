@@ -1542,6 +1542,34 @@ particles = {
     minAngleEmitter = 0,
     maxAngleEmitter = 0,
     animation = "lifeTime"
+  },
+  green_rocket = {
+    sprites = {
+      "SUPERSEED_SEQUENCE_1",
+      "SUPERSEED_SEQUENCE_2",
+      "SUPERSEED_SEQUENCE_3",
+      "SUPERSEED_SEQUENCE_4",
+      "SUPERSEED_SEQUENCE_5",
+      "SUPERSEED_SEQUENCE_6",
+      "SUPERSEED_SEQUENCE_7"
+    },
+    sheet = "",
+    --emitter_box = {
+      minVelX = -200,
+      maxVelX = -200,
+      minVelY = -100,
+      maxVelY = 100,
+    --},
+    minAngleVel = -featherSpinSpeed,
+    maxAngleVel = featherSpinSpeed,
+    minScaleBegin = featherSizeMedium * 0.3,
+    maxScaleBegin = featherSizeLarge * 0.3,
+    minScaleEnd = 0,
+    maxScaleEnd = 0,
+    lifeTime = 1.5,
+    gravityX = 0,
+    gravityY = 100,
+    animation = "lifeTime"
   }
 }
 filename = "particles.lua"

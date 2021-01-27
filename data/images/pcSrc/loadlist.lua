@@ -22,6 +22,12 @@ assetLoadList = {
         0
       }
     },
+    BLOCKS_GREEN = {
+      {
+        "BLOCKS_GREEN_ELEMENTS_1.dat",
+        0
+      }
+    },
     BUTTONS = {
       {
         "BUTTONS_SHEET_2.dat",
@@ -533,6 +539,28 @@ assetLoadList = {
       },
       {
         "THEME_15_COMPOSPRITES.dat",
+        1
+      }
+    },
+    THEME_16 = {
+      {
+        "THEME_16_PARALLAX_1_16.dat",
+        0
+      },
+      {
+        "THEME_16_PARALLAX_2_16.dat",
+        0
+      },
+      {
+        "THEME_16_THEME_16.dat",
+        0
+      },
+      {
+        "THEME_16_THEME_16_GROUND.dat",
+        0
+      },
+      {
+        "THEME_16_COMPOSPRITES.dat",
         1
       }
     },

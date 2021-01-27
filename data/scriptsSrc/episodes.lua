@@ -8,6 +8,11 @@ gamelua.g_episodes = {
     score_achievement_limit = 4000000,
     per_page_level_numbering = true,
     button = "BTN_EP1",
+	reward_completion = {sprite = "REWARD_1", type = "projectile"},
+    reward_three_stars = {
+      sprite = "REWARD_1_STAR",
+      type = "projectile"
+    },
     pages = {
       {
         folder_name = "pack1",
@@ -145,6 +150,11 @@ gamelua.g_episodes = {
     score_achievement_limit = 3300000,
     per_page_level_numbering = true,
     button = "BTN_EP2",
+	reward_completion = {sprite = "REWARD_2", type = "projectile"},
+    reward_three_stars = {
+      sprite = "REWARD_2_STAR",
+      type = "projectile"
+    },
     pages = {
       {
         folder_name = "pack4",
@@ -255,6 +265,12 @@ gamelua.g_episodes = {
     score_achievement_limit = 4800000,
     per_page_level_numbering = true,
     button = "BTN_EP3",
+    level_selection_subclass = "DangerAboveLevelSelection",
+    reward_completion = {sprite = "REWARD_3", type = "balloon"},
+    reward_three_stars = {
+      sprite = "REWARD_3_STAR",
+      type = "balloon"
+    },
     pages = {
       {
         folder_name = "pack6",
@@ -455,6 +471,11 @@ gamelua.g_episodes = {
     score_achievement_limit = 3900000,
     per_page_level_numbering = true,
     button = "BTN_EP4",
+    reward_completion = {sprite = "REWARD_4", type = "projectile"},
+    reward_three_stars = {
+      sprite = "REWARD_4_STAR",
+      type = "projectile"
+    },
     pages = {
       {
         folder_name = "pack9",
@@ -655,6 +676,11 @@ gamelua.g_episodes = {
     score_achievement_limit = 4100000,
     per_page_level_numbering = true,
     button = "BTN_EP5",
+    reward_completion = {sprite = "REWARD_5", type = "projectile"},
+    reward_three_stars = {
+      sprite = "REWARD_5_STAR",
+      type = "projectile"
+    },
     pages = {
       {
         folder_name = "pack12",
@@ -888,6 +914,11 @@ gamelua.g_episodes = {
     score_achievement_limit = 5276000,
     per_page_level_numbering = true,
     button = "BTN_EP6",
+    reward_completion = {sprite = "REWARD_6", type = "projectile"},
+    reward_three_stars = {
+      sprite = "REWARD_6_STAR",
+      type = "projectile"
+    },
     pages = {
       {
         folder_name = "pack15",
@@ -1004,6 +1035,11 @@ gamelua.g_episodes = {
     decor_right = "LS_THEME_16_RIGHT",
     per_page_level_numbering = true,
     button = "BTN_EP7",
+	reward_completion = {sprite = "REWARD_7", type = "projectile"},
+    reward_three_stars = {
+      sprite = "REWARD_7_STAR",
+      type = "projectile"
+    },
     pages = {
       {
         folder_name = "pack18",
@@ -1038,6 +1074,136 @@ gamelua.g_episodes = {
           {name = "LevelH804"},
           {
             name = "LevelH900",
+            clear_cutscene = "world18_complete",
+            episode_end = true
+          }
+        }
+      }
+    }
+  },
+  [8] = {
+    icon = "LS_PACK_THUMB_7",
+    name = "TEXT_LP_NAME_7",
+    decor_left = "LS_THEME_BADPIGGIES_LEFT",
+    decor_right = "LS_THEME_BADPIGGIES_RIGHT",
+    per_page_level_numbering = true,
+    button = "BTN_BADPIGGIES",
+    reward_completion = {sprite = "REWARD_7", type = "projectile"},
+    reward_three_stars = {
+      sprite = "REWARD_7_STAR",
+      type = "projectile"
+    },
+    level_selection_subclass = "BadPiggiesLevelSelection",
+    pages = {
+      {
+        folder_name = "pack19",
+        display_number = "19",
+        world_number = 19,
+        display_dot_numbers = true,
+        colour = {
+          r = 70,
+          g = 115,
+          b = 53
+        },
+        level_button = "LS_LEVEL_BG_NORMAL_OPEN_4",
+        layout = "grid",
+        layout_params = {rows = 3, cols = 5},
+        levels = {
+          {
+            name = "Level743",
+            intro_cutscene = "pack9_intro"
+          },
+          {name = "Level744"},
+          {name = "Level745"},
+          {name = "Level746"},
+          {name = "Level747"},
+          {name = "Level748"},
+          {name = "Level749"},
+          {name = "Level750"},
+          {name = "Level751"},
+          {name = "Level764"},
+          {name = "Level765"},
+          {name = "Level766"},
+          {name = "Level767"},
+          {name = "Level768"},
+          {
+            name = "Level769",
+            clear_cutscene = "world19_complete"
+          }
+        }
+      },
+      {
+        folder_name = "pack19",
+        display_number = "20",
+        world_number = 20,
+        display_dot_numbers = true,
+        colour = {
+          r = 125,
+          g = 86,
+          b = 40
+        },
+        level_button = "LS_LEVEL_BG_NORMAL_OPEN_4",
+        layout = "grid",
+        locked = true,
+        layout_params = {rows = 3, cols = 5},
+        levels = {
+          {
+            name = "Level7430",
+            intro_cutscene = "pack7_intro"
+          },
+          {name = "Level7440"},
+          {name = "Level7450"},
+          {name = "Level7460"},
+          {name = "Level7470"},
+          {name = "Level7480"},
+          {name = "Level7490"},
+          {name = "Level7500"},
+          {name = "Level7510"},
+          {name = "Level7640"},
+          {name = "Level7650"},
+          {name = "Level7660"},
+          {name = "Level7670"},
+          {name = "Level7680"},
+          {
+            name = "Level7690",
+            clear_cutscene = "world18_complete"
+          }
+        }
+      },
+      {
+        folder_name = "pack19",
+        display_number = "21",
+        world_number = 21,
+        display_dot_numbers = true,
+        colour = {
+          r = 0,
+          g = 0,
+          b = 0
+        },
+        level_button = "LS_LEVEL_BG_NORMAL_OPEN_4",
+        layout = "grid",
+        locked = true,
+        layout_params = {rows = 3, cols = 5},
+        levels = {
+          {
+            name = "Level74300",
+            intro_cutscene = "pack7_intro"
+          },
+          {name = "Level74400"},
+          {name = "Level74500"},
+          {name = "Level74600"},
+          {name = "Level74700"},
+          {name = "Level74800"},
+          {name = "Level74900"},
+          {name = "Level75000"},
+          {name = "Level75100"},
+          {name = "Level76400"},
+          {name = "Level76500"},
+          {name = "Level76600"},
+          {name = "Level76700"},
+          {name = "Level76800"},
+          {
+            name = "Level76900",
             clear_cutscene = "world18_complete",
             episode_end = true
           }
@@ -1183,6 +1349,7 @@ gamelua.g_episodes = {
     free_to_play = true,
     button = "BTN_EPG",
     no_level_progression = true,
+	level_selection_subclass = "GoldenEggsLevelSelection",
     pages = {
       {
         folder_name = "goldeneggs1",
@@ -1201,6 +1368,7 @@ gamelua.g_episodes = {
         },
         extra = true,
         free_to_play = true,
+		calculate_as_golden_egg_levels = true,
         levels = {
           {
             name = "LevelGE_4",
@@ -1325,6 +1493,7 @@ gamelua.g_episodes = {
         },
         extra = true,
         free_to_play = true,
+		calculate_as_golden_egg_levels = true,
         levels = {
           {
             name = "LevelGE_11",
@@ -1368,7 +1537,7 @@ gamelua.g_episodes = {
             y = 0.73,
             level_button_override = "EGG_SUPER_BOWL",
             completed_sprite_override = "EGG_SUPER_BOWL_STAR",
-            display_number_override = "*",
+            world_number_override = "*",
             external_link = "RIO_CONTEST_URL"
           },
           {
@@ -1412,4 +1581,7 @@ for i = 1, #gamelua.g_episodes do
 end
 gamelua.g_episodeIds[#gamelua.g_episodes + 1] = "SURF"
 gamelua.g_episodeIds[#gamelua.g_episodes + 2] = "G"
+if gamelua.applyChinaRestictions then
+  gamelua.g_episodes[5].pages[4] = nil
+end
 filename = "episodes.lua"

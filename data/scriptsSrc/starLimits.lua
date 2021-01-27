@@ -1,3 +1,93 @@
+Level743 = {
+  silverScore = 79000,
+  goldScore = 86000,
+  eagleScore = 108000,
+  rovioScore = 3000
+}
+Level744 = {
+  silverScore = 71000,
+  goldScore = 78000,
+  eagleScore = 106000,
+  rovioScore = 3000
+}
+Level745 = {
+  silverScore = 109000,
+  goldScore = 116000,
+  eagleScore = 131000,
+  rovioScore = 3000
+}
+Level746 = {
+  silverScore = 70000,
+  goldScore = 77000,
+  eagleScore = 110000,
+  rovioScore = 3000
+}
+Level747 = {
+  silverScore = 120000,
+  goldScore = 127000,
+  eagleScore = 126000,
+  rovioScore = 3000
+}
+Level748 = {
+  silverScore = 75000,
+  goldScore = 82000,
+  eagleScore = 100000,
+  rovioScore = 3000
+}
+Level749 = {
+  silverScore = 131000,
+  goldScore = 138000,
+  eagleScore = 158000,
+  rovioScore = 3000
+}
+Level750 = {
+  silverScore = 106000,
+  goldScore = 113000,
+  eagleScore = 109000,
+  rovioScore = 3000
+}
+Level751 = {
+  silverScore = 84000,
+  goldScore = 91000,
+  eagleScore = 107000,
+  rovioScore = 3000
+}
+Level764 = {
+  silverScore = 96000,
+  goldScore = 103000,
+  eagleScore = 111000,
+  rovioScore = 3000
+}
+Level765 = {
+  silverScore = 57000,
+  goldScore = 64000,
+  eagleScore = 76000,
+  rovioScore = 3000
+}
+Level766 = {
+  silverScore = 85000,
+  goldScore = 92000,
+  eagleScore = 95000,
+  rovioScore = 3000
+}
+Level767 = {
+  silverScore = 83000,
+  goldScore = 90000,
+  eagleScore = 113000,
+  rovioScore = 3000
+}
+Level768 = {
+  silverScore = 84000,
+  goldScore = 91000,
+  eagleScore = 129000,
+  rovioScore = 3000
+}
+Level769 = {
+  silverScore = 88000,
+  goldScore = 95000,
+  eagleScore = 125000,
+  rovioScore = 3000
+}
 LevelH552 = {
   silverScore = 68000,
   goldScore = 75000,
@@ -1097,94 +1187,79 @@ LevelS030 = {
   eagleScore = 114000
 }
 LevelS031 = {
-  silverScore = 1000,
-  goldScore = 2000,
-  rovioScore = 3000,
-  eagleScore = 4000
+  silverScore = 80000,
+  goldScore = 86000,
+  eagleScore = 113000
 }
 LevelS032 = {
-  silverScore = 1000,
-  goldScore = 2000,
-  rovioScore = 3000,
-  eagleScore = 4000
+  silverScore = 91000,
+  goldScore = 101000,
+  eagleScore = 150000
 }
 LevelS033 = {
-  silverScore = 1000,
-  goldScore = 2000,
-  rovioScore = 3000,
-  eagleScore = 4000
+  silverScore = 85000,
+  goldScore = 92000,
+  eagleScore = 104000
 }
 LevelS034 = {
-  silverScore = 1000,
-  goldScore = 2000,
-  rovioScore = 3000,
-  eagleScore = 4000
+  silverScore = 120000,
+  goldScore = 132000,
+  eagleScore = 203000
 }
 LevelS035 = {
-  silverScore = 1000,
-  goldScore = 2000,
-  rovioScore = 3000,
-  eagleScore = 4000
+  silverScore = 80000,
+  goldScore = 87000,
+  eagleScore = 119000
 }
 LevelS036 = {
-  silverScore = 1000,
-  goldScore = 2000,
-  rovioScore = 3000,
-  eagleScore = 4000
+  silverScore = 109000,
+  goldScore = 116000,
+  eagleScore = 152000
 }
 LevelS037 = {
-  silverScore = 1000,
-  goldScore = 2000,
-  rovioScore = 3000,
-  eagleScore = 4000
+  silverScore = 79000,
+  goldScore = 86000,
+  eagleScore = 115000
 }
 LevelS038 = {
-  silverScore = 1000,
-  goldScore = 2000,
-  rovioScore = 3000,
-  eagleScore = 4000
+  silverScore = 95000,
+  goldScore = 105000,
+  eagleScore = 143000
 }
 LevelS039 = {
-  silverScore = 1000,
-  goldScore = 2000,
-  rovioScore = 3000,
-  eagleScore = 4000
+  silverScore = 97000,
+  goldScore = 107000,
+  eagleScore = 120000
 }
 LevelS040 = {
-  silverScore = 1000,
-  goldScore = 2000,
-  rovioScore = 3000,
-  eagleScore = 4000
+  silverScore = 52000,
+  goldScore = 62000,
+  eagleScore = 96000
 }
 LevelS041 = {
-  silverScore = 1000,
-  goldScore = 2000,
-  rovioScore = 3000,
-  eagleScore = 4000
+  silverScore = 95000,
+  goldScore = 103000,
+  eagleScore = 120000
 }
 LevelS042 = {
-  silverScore = 1000,
-  goldScore = 2000,
-  rovioScore = 3000,
-  eagleScore = 4000
+  silverScore = 92000,
+  goldScore = 100000,
+  eagleScore = 117000
 }
 LevelS043 = {
-  silverScore = 1000,
-  goldScore = 2000,
-  rovioScore = 3000,
-  eagleScore = 4000
+  silverScore = 40000,
+  goldScore = 50000,
+  eagleScore = 102000
 }
 LevelS044 = {
-  silverScore = 1000,
-  goldScore = 2000,
-  rovioScore = 3000,
-  eagleScore = 4000
+  silverScore = 102000,
+  goldScore = 110000,
+  eagleScore = 140000
 }
 LevelS045 = {
-  silverScore = 1000,
-  goldScore = 2000,
-  rovioScore = 3000,
-  eagleScore = 4000
+  silverScore = 103000,
+  goldScore = 110000,
+  eagleScore = 140000
 }
 LevelP3_306 = {
   silverScore = 110000,
