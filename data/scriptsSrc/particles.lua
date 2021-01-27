@@ -41,8 +41,7 @@ particles = {
     },
     animation = "lifeTime",
     sheet = "INGAME_BIRDS_1",
-    minVel = 0,
-    maxVel = 0,
+    emitter_circle = {minVel = 0, maxVel = 0},
     minAngleVel = -2,
     maxAngleVel = 2,
     minScaleBegin = 1.5,
@@ -64,8 +63,7 @@ particles = {
     },
     animation = "lifeTime",
     sheet = "INGAME_BIRDS_1",
-    minVel = 0,
-    maxVel = 0,
+    emitter_circle = {minVel = 0, maxVel = 0},
     minAngleVel = -2,
     maxAngleVel = 2,
     minScaleBegin = 6,
@@ -87,8 +85,7 @@ particles = {
     },
     animation = "lifeTime",
     sheet = "INGAME_BIRDS_1",
-    minVel = 0,
-    maxVel = 0,
+    emitter_circle = {minVel = 0, maxVel = 0},
     minAngleVel = -2,
     maxAngleVel = 2,
     minScaleBegin = 2,
@@ -110,8 +107,7 @@ particles = {
     },
     animation = "lifeTime",
     sheet = "INGAME_BIRDS_1",
-    minVel = 0,
-    maxVel = 0,
+    emitter_circle = {minVel = 0, maxVel = 0},
     minAngleVel = -2,
     maxAngleVel = 2,
     minScaleBegin = 8,
@@ -129,8 +125,12 @@ particles = {
       "WOOD_PARTICLE_1"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = -100,
-    maxVel = 100,
+    emitter_box = {
+      minVelX = -100,
+      maxVelX = 100,
+      minVelY = -100,
+      maxVelY = 100
+    },
     minAngleVel = -8,
     maxAngleVel = 8,
     minScaleBegin = 1.8,
@@ -148,8 +148,12 @@ particles = {
       "ROCK_PARTICLE_3"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = -120,
-    maxVel = 120,
+    emitter_box = {
+      minVelX = -120,
+      maxVelX = 120,
+      minVelY = -120,
+      maxVelY = 120
+    },
     minAngleVel = -7,
     maxAngleVel = 7,
     minScaleBegin = 1.7,
@@ -169,8 +173,12 @@ particles = {
       "LIGHT_PARTICLE_5"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = -120,
-    maxVel = 120,
+    emitter_box = {
+      minVelX = -120,
+      maxVelX = 120,
+      minVelY = -120,
+      maxVelY = 120
+    },
     minAngleVel = -8,
     maxAngleVel = 8,
     minScaleBegin = 1.2,
@@ -193,8 +201,12 @@ particles = {
       "SMOKE_BUFF_2"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = -50,
-    maxVel = 50,
+    emitter_box = {
+      minVelX = -50,
+      maxVelX = 50,
+      minVelY = -50,
+      maxVelY = 50
+    },
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = featherSizeMedium,
@@ -217,8 +229,12 @@ particles = {
       "SMOKE_BUFF_2"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = -50,
-    maxVel = 50,
+    emitter_box = {
+      minVelX = -50,
+      maxVelX = 50,
+      minVelY = -50,
+      maxVelY = 50
+    },
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = featherSizeMedium,
@@ -241,8 +257,12 @@ particles = {
       "SMOKE_BUFF_2"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = -50,
-    maxVel = 50,
+    emitter_box = {
+      minVelX = -50,
+      maxVelX = 50,
+      minVelY = -50,
+      maxVelY = 50
+    },
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = featherSizeMedium,
@@ -265,8 +285,12 @@ particles = {
       "SMOKE_BUFF_2"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = -50,
-    maxVel = 50,
+    emitter_box = {
+      minVelX = -50,
+      maxVelX = 50,
+      minVelY = -50,
+      maxVelY = 50
+    },
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = featherSizeMedium,
@@ -282,8 +306,12 @@ particles = {
       "EPISODEG_STAR"
     },
     sheet = "",
-    minVel = -55,
-    maxVel = 55,
+    emitter_box = {
+      minVelX = -55,
+      maxVelX = 55,
+      minVelY = -55,
+      maxVelY = 55
+    },
     minAngleVel = -5,
     maxAngleVel = 5,
     minScaleBegin = 0.1,
@@ -306,8 +334,12 @@ particles = {
       "SMOKE_BUFF_2"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = -50,
-    maxVel = 50,
+    emitter_box = {
+      minVelX = -50,
+      maxVelX = 50,
+      minVelY = -50,
+      maxVelY = 50
+    },
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = featherSizeMedium,
@@ -330,8 +362,12 @@ particles = {
       "SMOKE_BUFF_2"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = -50,
-    maxVel = 50,
+    emitter_box = {
+      minVelX = -50,
+      maxVelX = 50,
+      minVelY = -50,
+      maxVelY = 50
+    },
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = featherSizeMedium,
@@ -349,8 +385,12 @@ particles = {
       "BLACK_FEATHER_3"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = -50,
-    maxVel = 50,
+    emitter_box = {
+      minVelX = -50,
+      maxVelX = 50,
+      minVelY = -50,
+      maxVelY = 50
+    },
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = featherSizeMedium,
@@ -373,8 +413,12 @@ particles = {
       "SMOKE_BUFF_2"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = -50,
-    maxVel = 50,
+    emitter_box = {
+      minVelX = -50,
+      maxVelX = 50,
+      minVelY = -50,
+      maxVelY = 50
+    },
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = featherSizeMedium,
@@ -392,8 +436,12 @@ particles = {
       "EGG_SHELL_3"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = -60,
-    maxVel = 60,
+    emitter_box = {
+      minVelX = -60,
+      maxVelX = 60,
+      minVelY = -60,
+      maxVelY = 60
+    },
     minAngleVel = -4,
     maxAngleVel = 4,
     minScaleBegin = 0.8,
@@ -407,8 +455,12 @@ particles = {
   explosion = {
     sprites = {"EXPLOSION"},
     sheet = "INGAME_BIRDS_1",
-    minVel = 0,
-    maxVel = 0,
+    emitter_box = {
+      minVelX = 0,
+      maxVelX = 0,
+      minVelY = 0,
+      maxVelY = 0
+    },
     minAngleVel = 11,
     maxAngleVel = 11,
     minScaleBegin = 2.5,
@@ -424,8 +476,12 @@ particles = {
       "EXPLOSION_CLOUD_1"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = 0,
-    maxVel = 0,
+    emitter_box = {
+      minVelX = 0,
+      maxVelX = 0,
+      minVelY = 0,
+      maxVelY = 0
+    },
     minAngleVel = -2,
     maxAngleVel = 2,
     minScaleBegin = 2,
@@ -443,8 +499,12 @@ particles = {
       "GREEN_FEATHER_3"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = 0,
-    maxVel = 0,
+    emitter_box = {
+      minVelX = 0,
+      maxVelX = 0,
+      minVelY = 0,
+      maxVelY = 0
+    },
     minAngleVel = -2,
     maxAngleVel = 2,
     minScaleBegin = 1,
@@ -462,8 +522,12 @@ particles = {
       "RED_FEATHER_3"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = 0,
-    maxVel = 0,
+    emitter_box = {
+      minVelX = 0,
+      maxVelX = 0,
+      minVelY = 0,
+      maxVelY = 0
+    },
     minAngleVel = -2,
     maxAngleVel = 2,
     minScaleBegin = 1,
@@ -481,8 +545,12 @@ particles = {
       "BLUE_FEATHER_3"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = 0,
-    maxVel = 0,
+    emitter_box = {
+      minVelX = 0,
+      maxVelX = 0,
+      minVelY = 0,
+      maxVelY = 0
+    },
     minAngleVel = -2,
     maxAngleVel = 2,
     minScaleBegin = 1,
@@ -500,8 +568,12 @@ particles = {
       "YELLOW_FEATHER_3"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = 0,
-    maxVel = 0,
+    emitter_box = {
+      minVelX = 0,
+      maxVelX = 0,
+      minVelY = 0,
+      maxVelY = 0
+    },
     minAngleVel = -2,
     maxAngleVel = 2,
     minScaleBegin = 1,
@@ -521,8 +593,12 @@ particles = {
       "BLACK_FEATHER_3"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = -50,
-    maxVel = 50,
+    emitter_box = {
+      minVelX = -50,
+      maxVelX = 50,
+      minVelY = -50,
+      maxVelY = 50
+    },
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = featherSizeMedium * 2,
@@ -540,8 +616,12 @@ particles = {
       "PARTICLE_PUMPKIN_3"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = -300,
-    maxVel = 300,
+    emitter_box = {
+      minVelX = -300,
+      maxVelX = 300,
+      minVelY = -300,
+      maxVelY = 300
+    },
     minAngleVel = -8,
     maxAngleVel = 8,
     minScaleBegin = 0.825,
@@ -574,8 +654,12 @@ particles = {
     },
     animation = "lifeTime",
     sheet = "INGAME_BIRDS_1",
-    minVel = -800,
-    maxVel = 800,
+    emitter_box = {
+      minVelX = -800,
+      maxVelX = 800,
+      minVelY = -800,
+      maxVelY = 800
+    },
     angleMinEmitter = -15,
     angleMaxEmitter = 15,
     minAngleVel = -2,
@@ -602,8 +686,12 @@ particles = {
     animation = "lifeTime",
     sheet = "INGAME_BIRDS_1",
     randomizeBirthPosition = false,
-    minVel = -10,
-    maxVel = 10,
+    emitter_box = {
+      minVelX = -10,
+      maxVelX = 10,
+      minVelY = -10,
+      maxVelY = 10
+    },
     angleMinEmitter = -3,
     angleMaxEmitter = 3,
     minAngleVel = -0.25,
@@ -624,8 +712,12 @@ particles = {
       "AMETHYST_PARTICLE_4"
     },
     sheet = "INGAME_BLOCKS_2",
-    minVel = -100,
-    maxVel = 100,
+    emitter_box = {
+      minVelX = -100,
+      maxVelX = 100,
+      minVelY = -100,
+      maxVelY = 100
+    },
     minAngleVel = -8,
     maxAngleVel = 8,
     minScaleBegin = 1.5,
@@ -643,8 +735,12 @@ particles = {
       "RUBY_PARTICLE_3"
     },
     sheet = "INGAME_BLOCKS_2",
-    minVel = -100,
-    maxVel = 100,
+    emitter_box = {
+      minVelX = -100,
+      maxVelX = 100,
+      minVelY = -100,
+      maxVelY = 100
+    },
     minAngleVel = -8,
     maxAngleVel = 8,
     minScaleBegin = 1.5,
@@ -662,8 +758,12 @@ particles = {
       "AMBER_PARTICLE_3"
     },
     sheet = "INGAME_BLOCKS_2",
-    minVel = -100,
-    maxVel = 100,
+    emitter_box = {
+      minVelX = -100,
+      maxVelX = 100,
+      minVelY = -100,
+      maxVelY = 100
+    },
     minAngleVel = -8,
     maxAngleVel = 8,
     minScaleBegin = 1.5,
@@ -682,8 +782,12 @@ particles = {
       "STALAKTITE_PARTICLE_4"
     },
     sheet = "INGAME_BLOCKS_2",
-    minVel = -60,
-    maxVel = 60,
+    emitter_box = {
+      minVelX = -60,
+      maxVelX = 60,
+      minVelY = -60,
+      maxVelY = 60
+    },
     minAngleVel = -8,
     maxAngleVel = 8,
     minScaleBegin = 0.7,
@@ -701,8 +805,12 @@ particles = {
       "WHITE_STALAKTITE_PARTICLE_3"
     },
     sheet = "INGAME_BLOCKS_2",
-    minVel = -60,
-    maxVel = 60,
+    emitter_box = {
+      minVelX = -60,
+      maxVelX = 60,
+      minVelY = -60,
+      maxVelY = 60
+    },
     minAngleVel = -8,
     maxAngleVel = 8,
     minScaleBegin = 0.7,
@@ -724,8 +832,12 @@ particles = {
     },
     sheet = "INGAME_PARTICLES_1",
     amount = 40,
-    minVel = 400,
-    maxVel = 1600,
+    emitter_circle = {
+      minVel = 400,
+      maxVel = 1600,
+      minAngleEmitter = 160,
+      maxAngleEmitter = 260
+    },
     minAngleVel = 2,
     maxAngleVel = 8,
     minScaleBegin = 0.5,
@@ -735,8 +847,6 @@ particles = {
     lifeTime = 5,
     gravityX = 0,
     gravityY = 300,
-    minAngleEmitter = 160,
-    maxAngleEmitter = 260,
     minAngle = -180,
     maxAngle = 180
   },
@@ -751,8 +861,12 @@ particles = {
     },
     sheet = "INGAME_PARTICLES_1",
     amount = 40,
-    minVel = 300,
-    maxVel = 1000,
+    emitter_circle = {
+      minVel = 300,
+      maxVel = 1000,
+      minAngleEmitter = -150,
+      maxAngleEmitter = -30
+    },
     minAngleVel = 2,
     maxAngleVel = 8,
     minScaleBegin = 0.5,
@@ -762,8 +876,6 @@ particles = {
     lifeTime = 5,
     gravityX = 0,
     gravityY = 300,
-    minAngleEmitter = -150,
-    maxAngleEmitter = -30,
     minAngle = -180,
     maxAngle = 180
   },
@@ -778,8 +890,12 @@ particles = {
     },
     sheet = "INGAME_PARTICLES_1",
     amount = 40,
-    minVel = 400,
-    maxVel = 1600,
+    emitter_circle = {
+      minVel = 400,
+      maxVel = 1600,
+      minAngleEmitter = 20,
+      maxAngleEmitter = -70
+    },
     minAngleVel = 2,
     maxAngleVel = 8,
     minScaleBegin = 0.5,
@@ -789,8 +905,6 @@ particles = {
     lifeTime = 5,
     gravityX = 0,
     gravityY = 300,
-    minAngleEmitter = 20,
-    maxAngleEmitter = -70,
     minAngle = -180,
     maxAngle = 180
   },
@@ -800,8 +914,12 @@ particles = {
     },
     sheet = "INGAME_PARTICLES_1",
     amount = 40,
-    minVel = 400,
-    maxVel = 1600,
+    emitter_circle = {
+      minVel = 400,
+      maxVel = 1600,
+      minAngleEmitter = 20,
+      maxAngleEmitter = -70
+    },
     minAngleVel = 2,
     maxAngleVel = 8,
     minScaleBegin = 0.5,
@@ -811,8 +929,6 @@ particles = {
     lifeTime = 5,
     gravityX = 0,
     gravityY = 300,
-    minAngleEmitter = 20,
-    maxAngleEmitter = -70,
     minAngle = -180,
     maxAngle = 180
   },
@@ -828,8 +944,12 @@ particles = {
       "SMOKE_BUFF_2"
     },
     sheet = "",
-    minVel = 200,
-    maxVel = 300,
+    emitter_box = {
+      minVel = 200,
+      maxVel = 300,
+      minAngleEmitter = -180,
+      maxAngleEmitter = 180
+    },
     minAngleVel = 1,
     maxAngleVel = 8,
     minScaleBegin = 1,
@@ -839,8 +959,6 @@ particles = {
     lifeTime = 0.4,
     gravityX = 0,
     gravityY = 0,
-    minAngleEmitter = -180,
-    maxAngleEmitter = 180,
     minAngle = -180,
     maxAngle = 180
   },
@@ -852,8 +970,12 @@ particles = {
       "PARTICLE_CHOCO_4"
     },
     sheet = "INGAME_BLOCKS_2",
-    minVel = -100,
-    maxVel = 100,
+    emitter_box = {
+      minVelX = -100,
+      maxVelX = 100,
+      minVelY = -100,
+      maxVelY = 100
+    },
     minAngleVel = -8,
     maxAngleVel = 8,
     minScaleBegin = 1.5,
@@ -872,8 +994,12 @@ particles = {
       "PARTICLE_PINK_4"
     },
     sheet = "INGAME_BLOCKS_2",
-    minVel = -100,
-    maxVel = 100,
+    emitter_box = {
+      minVelX = -100,
+      maxVelX = 100,
+      minVelY = -100,
+      maxVelY = 100
+    },
     minAngleVel = -8,
     maxAngleVel = 8,
     minScaleBegin = 1.5,
@@ -892,8 +1018,12 @@ particles = {
       "PARTICLE_MINT_4"
     },
     sheet = "INGAME_BLOCKS_2",
-    minVel = -100,
-    maxVel = 100,
+    emitter_box = {
+      minVelX = -100,
+      maxVelX = 100,
+      minVelY = -100,
+      maxVelY = 100
+    },
     minAngleVel = -8,
     maxAngleVel = 8,
     minScaleBegin = 1.5,
@@ -913,8 +1043,12 @@ particles = {
       "EXPLOSION_SEQUENCE2_5"
     },
     sheet = "",
-    minVel = 0,
-    maxVel = 0,
+    emitter_box = {
+      minVelX = 0,
+      maxVelX = 0,
+      minVelY = 0,
+      maxVelY = 0
+    },
     minAngleVel = 0,
     maxAngleVel = 0,
     minScaleBegin = 2.5,
@@ -932,8 +1066,12 @@ particles = {
     },
     sheet = "INGAME_PARTICLES_1",
     amount = 40,
-    minVel = 200,
-    maxVel = 800,
+    emitter_circle = {
+      minVel = 200,
+      maxVel = 800,
+      minAngleEmitter = -180,
+      maxAngleEmitter = 180
+    },
     minAngleVel = 2,
     maxAngleVel = 8,
     minScaleBegin = 0.5,
@@ -943,8 +1081,6 @@ particles = {
     lifeTime = 0.5,
     gravityX = 0,
     gravityY = 300,
-    minAngleEmitter = -180,
-    maxAngleEmitter = 180,
     minAngle = -180,
     maxAngle = 180
   },
@@ -954,8 +1090,12 @@ particles = {
       "EXPLOSION_CLOUD_2"
     },
     sheet = "INGAME_BIRDS_1",
-    minVel = -50,
-    maxVel = 50,
+    emitter_box = {
+      minVelX = -50,
+      maxVelX = 50,
+      minVelY = -50,
+      maxVelY = 50
+    },
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = featherSizeMedium,
@@ -971,8 +1111,12 @@ particles = {
       "SUPERSEED_SEQUENCE_1"
     },
     sheet = "",
-    minVel = 0,
-    maxVel = 50,
+    emitter_box = {
+      minVelX = 0,
+      maxVelX = 50,
+      minVelY = 0,
+      maxVelY = 50
+    },
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = featherSizeMedium * 0.6,
@@ -996,8 +1140,12 @@ particles = {
       "POWERUP_SEQUENCE_9"
     },
     sheet = "",
-    minVel = 0,
-    maxVel = 0,
+    emitter_circle = {
+      minVel = 0,
+      maxVel = 0,
+      minAngleEmitter = 0,
+      maxAngleEmitter = 0
+    },
     minAngleVel = 0,
     maxAngleVel = 0,
     minScaleBegin = 3,
@@ -1007,8 +1155,6 @@ particles = {
     lifeTime = 0.5,
     gravityX = 0,
     gravityY = 0,
-    minAngleEmitter = 0,
-    maxAngleEmitter = 0,
     animation = "lifeTime"
   },
   superSlingBurst = {
@@ -1017,8 +1163,12 @@ particles = {
     },
     sheet = "INGAME_PARTICLES_1",
     amount = 40,
-    minVel = 400,
-    maxVel = 1600,
+    emitter_circle = {
+      minVel = 400,
+      maxVel = 1600,
+      minAngleEmitter = -110,
+      maxAngleEmitter = -70
+    },
     minAngleVel = 2,
     maxAngleVel = 8,
     minScaleBegin = 1,
@@ -1028,8 +1178,6 @@ particles = {
     lifeTime = 0.8,
     gravityX = 0,
     gravityY = 800,
-    minAngleEmitter = -110,
-    maxAngleEmitter = -70,
     minAngle = -180,
     maxAngle = 180
   },
@@ -1044,8 +1192,12 @@ particles = {
       "SUPERSEED_SEQUENCE_7"
     },
     sheet = "",
-    minVel = 0,
-    maxVel = 0,
+    emitter_circle = {
+      minVel = 0,
+      maxVel = 0,
+      minAngleEmitter = 0,
+      maxAngleEmitter = 0
+    },
     minAngleVel = 0,
     maxAngleVel = 0,
     minScaleBegin = 2,
@@ -1055,8 +1207,6 @@ particles = {
     lifeTime = 0.5,
     gravityX = 0,
     gravityY = 0,
-    minAngleEmitter = 0,
-    maxAngleEmitter = 0,
     animation = "lifeTime"
   },
   cheaterStamp = {
@@ -1070,8 +1220,12 @@ particles = {
       "SUPERSEED_SEQUENCE_7"
     },
     sheet = "",
-    minVel = 0,
-    maxVel = 0,
+    emitter_circle = {
+      minVel = 0,
+      maxVel = 0,
+      minAngleEmitter = 0,
+      maxAngleEmitter = 0
+    },
     minAngleVel = 0,
     maxAngleVel = 0,
     minScaleBegin = 1,
@@ -1081,8 +1235,6 @@ particles = {
     lifeTime = 0.5,
     gravityX = 0,
     gravityY = 0,
-    minAngleEmitter = 0,
-    maxAngleEmitter = 0,
     animation = "lifeTime"
   },
   superSeedActivationBurst = {
@@ -1096,8 +1248,12 @@ particles = {
       "SUPERSEED_SEQUENCE_7"
     },
     sheet = "",
-    minVel = -100,
-    maxVel = 100,
+    emitter_box = {
+      minVelX = -100,
+      maxVelX = 100,
+      minVelY = -100,
+      maxVelY = 100
+    },
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = featherSizeMedium * 0.3,
@@ -1123,8 +1279,12 @@ particles = {
       "STALAKTITE_PARTICLE_4"
     },
     sheet = "",
-    minVel = -80,
-    maxvel = 80,
+    emitter_box = {
+      minVelX = -80,
+      maxVelX = 80,
+      minVelY = -80,
+      maxVelY = 80
+    },
     minAngleVel = -7,
     maxAngleVel = 7,
     minScaleBegin = 1.7,
@@ -1140,8 +1300,12 @@ particles = {
       "EARTHQUAKE_SMOKE"
     },
     sheet = "",
-    minVel = 0,
-    maxvel = 0,
+    emitter_box = {
+      minVelX = 0,
+      maxVelX = 0,
+      minVelY = 0,
+      maxVelY = 0
+    },
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = featherSizeMedium * 0.6,
@@ -1160,8 +1324,12 @@ particles = {
       "AWARD_STARDEBRIS_PARTICLE4"
     },
     sheet = "",
-    minVel = 400,
-    maxVel = 1600,
+    emitter_circle = {
+      minVel = 400,
+      maxVel = 1600,
+      minAngleEmitter = -150,
+      maxAngleEmitter = 260
+    },
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = 1,
@@ -1171,8 +1339,6 @@ particles = {
     lifeTime = 5,
     gravityX = 0,
     gravityY = 800,
-    minAngleEmitter = -150,
-    maxAngleEmitter = 260,
     minAngle = -180,
     maxAngle = 180
   },
@@ -1181,8 +1347,12 @@ particles = {
       "AWARD_UI_STAREFFECT"
     },
     sheet = "",
-    minVel = 0,
-    maxVel = 0,
+    emitter_box = {
+      minVelX = 0,
+      maxVelX = 0,
+      minVelY = 0,
+      maxVelY = 0
+    },
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = 1,
@@ -1200,8 +1370,12 @@ particles = {
       "SUPERSEED_SEQUENCE_1"
     },
     sheet = "",
-    minVel = 100,
-    maxVel = 100,
+    emitter_circle = {
+      minVel = 100,
+      maxVel = 100,
+      minAngleEmitter = -180,
+      maxAngleEmitter = 0
+    },
     minAngleVel = 0,
     maxAngleVel = 0,
     minScaleBegin = 0.7,
@@ -1210,9 +1384,7 @@ particles = {
     maxScaleEnd = 0,
     lifeTime = 0.6,
     gravityX = 0,
-    gravityY = 0,
-    minAngleEmitter = -180,
-    maxAngleEmitter = 0
+    gravityY = 0
   },
   dailyRewardWin = {
     sprites = {
@@ -1225,8 +1397,12 @@ particles = {
       "SUPERSEED_SEQUENCE_7"
     },
     sheet = "",
-    minVel = 30,
-    maxVel = 100,
+    emitter_circle = {
+      minVel = 30,
+      maxVel = 100,
+      minAngleEmitter = -180,
+      maxAngleEmitter = 180
+    },
     minAngleVel = 0,
     maxAngleVel = 0,
     minScaleBegin = 0.3,
@@ -1235,9 +1411,7 @@ particles = {
     maxScaleEnd = 0,
     lifeTime = 1,
     gravityX = 0,
-    gravityY = 30,
-    minAngleEmitter = -180,
-    maxAngleEmitter = 180
+    gravityY = 30
   },
   shopPowerupReceived = {
     sprites = {
@@ -1250,8 +1424,12 @@ particles = {
       "SUPERSEED_SEQUENCE_7"
     },
     sheet = "",
-    minVel = 40,
-    maxVel = 150,
+    emitter_circle = {
+      minVel = 40,
+      maxVel = 150,
+      minAngleEmitter = -180,
+      maxAngleEmitter = 0
+    },
     minAngleVel = 0,
     maxAngleVel = 0,
     minScaleBegin = 0.3,
@@ -1260,9 +1438,7 @@ particles = {
     maxScaleEnd = 0,
     lifeTime = 1,
     gravityX = 0,
-    gravityY = 30,
-    minAngleEmitter = -180,
-    maxAngleEmitter = 0
+    gravityY = 30
   },
   confettisBlue = {
     sprites = {
@@ -1271,16 +1447,18 @@ particles = {
       "P_CONFETTI_BLUE_3"
     },
     sheet = "INGAME_PARTICLES_1",
-    minVel = confettiMinVel,
-    maxVel = confettiMaxVel,
+    emitter_circle = {
+      minVel = confettiMinVel,
+      maxVel = confettiMaxVel,
+      minAngleEmitter = confettiMinAngleEmitter,
+      maxAngleEmitter = confettiMaxAngleEmitter
+    },
     minAngleVel = confettiMinAngleVel,
     maxAngleVel = confettiMaxAngleVel,
     minScaleBegin = confettiMinScaleBegin,
     maxScaleBegin = confettiMaxScaleBegin,
     minScaleEnd = confettiMinScaleEnd,
     maxScaleEnd = confettiMaxScaleEnd,
-    minAngleEmitter = confettiMinAngleEmitter,
-    maxAngleEmitter = confettiMaxAngleEmitter,
     lifeTime = confettiLifeTime,
     gravityX = confettiGravityX,
     gravityY = confettiGravityY,
@@ -1294,16 +1472,18 @@ particles = {
       "P_CONFETTI_GREEN_3"
     },
     sheet = "INGAME_PARTICLES_1",
-    minVel = confettiMinVel,
-    maxVel = confettiMaxVel,
+    emitter_circle = {
+      minVel = confettiMinVel,
+      maxVel = confettiMaxVel,
+      minAngleEmitter = confettiMinAngleEmitter,
+      maxAngleEmitter = confettiMaxAngleEmitter
+    },
     minAngleVel = confettiMinAngleVel,
     maxAngleVel = confettiMaxAngleVel,
     minScaleBegin = confettiMinScaleBegin,
     maxScaleBegin = confettiMaxScaleBegin,
     minScaleEnd = confettiMinScaleEnd,
     maxScaleEnd = confettiMaxScaleEnd,
-    minAngleEmitter = confettiMinAngleEmitter,
-    maxAngleEmitter = confettiMaxAngleEmitter,
     lifeTime = confettiLifeTime,
     gravityX = confettiGravityX,
     gravityY = confettiGravityY,
@@ -1317,16 +1497,18 @@ particles = {
       "P_CONFETTI_SILVER_3"
     },
     sheet = "INGAME_PARTICLES_1",
-    minVel = confettiMinVel,
-    maxVel = confettiMaxVel,
+    emitter_circle = {
+      minVel = confettiMinVel,
+      maxVel = confettiMaxVel,
+      minAngleEmitter = confettiMinAngleEmitter,
+      maxAngleEmitter = confettiMaxAngleEmitter
+    },
     minAngleVel = confettiMinAngleVel,
     maxAngleVel = confettiMaxAngleVel,
     minScaleBegin = confettiMinScaleBegin,
     maxScaleBegin = confettiMaxScaleBegin,
     minScaleEnd = confettiMinScaleEnd,
     maxScaleEnd = confettiMaxScaleEnd,
-    minAngleEmitter = confettiMinAngleEmitter,
-    maxAngleEmitter = confettiMaxAngleEmitter,
     lifeTime = confettiLifeTime,
     gravityX = confettiGravityX,
     gravityY = confettiGravityY,
@@ -1343,16 +1525,18 @@ particles = {
       "P_CONFETTI_GREEN_3"
     },
     sheet = "INGAME_PARTICLES_1",
-    minVel = confettiMinVel,
-    maxVel = confettiMaxVel,
+    emitter_circle = {
+      minVel = confettiMinVel,
+      maxVel = confettiMaxVel,
+      minAngleEmitter = confettiMinAngleEmitter,
+      maxAngleEmitter = confettiMaxAngleEmitter
+    },
     minAngleVel = confettiMinAngleVel,
     maxAngleVel = confettiMaxAngleVel,
     minScaleBegin = confettiMinScaleBegin,
     maxScaleBegin = confettiMaxScaleBegin,
     minScaleEnd = confettiMinScaleEnd,
     maxScaleEnd = confettiMaxScaleEnd,
-    minAngleEmitter = confettiMinAngleEmitter,
-    maxAngleEmitter = confettiMaxAngleEmitter,
     lifeTime = confettiLifeTime,
     gravityX = confettiGravityX,
     gravityY = confettiGravityY,
@@ -1369,16 +1553,18 @@ particles = {
       "P_CONFETTI_SILVER_3"
     },
     sheet = "INGAME_PARTICLES_1",
-    minVel = confettiMinVel,
-    maxVel = confettiMaxVel,
+    emitter_circle = {
+      minVel = confettiMinVel,
+      maxVel = confettiMaxVel,
+      minAngleEmitter = confettiMinAngleEmitter,
+      maxAngleEmitter = confettiMaxAngleEmitter
+    },
     minAngleVel = confettiMinAngleVel,
     maxAngleVel = confettiMaxAngleVel,
     minScaleBegin = confettiMinScaleBegin,
     maxScaleBegin = confettiMaxScaleBegin,
     minScaleEnd = confettiMinScaleEnd,
     maxScaleEnd = confettiMaxScaleEnd,
-    minAngleEmitter = confettiMinAngleEmitter,
-    maxAngleEmitter = confettiMaxAngleEmitter,
     lifeTime = confettiLifeTime,
     gravityX = confettiGravityX,
     gravityY = confettiGravityY,
@@ -1395,16 +1581,18 @@ particles = {
       "P_CONFETTI_SILVER_3"
     },
     sheet = "INGAME_PARTICLES_1",
-    minVel = confettiMinVel,
-    maxVel = confettiMaxVel,
+    emitter_circle = {
+      minVel = confettiMinVel,
+      maxVel = confettiMaxVel,
+      minAngleEmitter = confettiMinAngleEmitter,
+      maxAngleEmitter = confettiMaxAngleEmitter
+    },
     minAngleVel = confettiMinAngleVel,
     maxAngleVel = confettiMaxAngleVel,
     minScaleBegin = confettiMinScaleBegin,
     maxScaleBegin = confettiMaxScaleBegin,
     minScaleEnd = confettiMinScaleEnd,
     maxScaleEnd = confettiMaxScaleEnd,
-    minAngleEmitter = confettiMinAngleEmitter,
-    maxAngleEmitter = confettiMaxAngleEmitter,
     lifeTime = confettiLifeTime,
     gravityX = confettiGravityX,
     gravityY = confettiGravityY,
@@ -1424,16 +1612,18 @@ particles = {
       "P_CONFETTI_SILVER_3"
     },
     sheet = "INGAME_PARTICLES_1",
-    minVel = confettiMinVel,
-    maxVel = confettiMaxVel,
+    emitter_circle = {
+      minVel = confettiMinVel,
+      maxVel = confettiMaxVel,
+      minAngleEmitter = confettiMinAngleEmitter,
+      maxAngleEmitter = confettiMaxAngleEmitter
+    },
     minAngleVel = confettiMinAngleVel,
     maxAngleVel = confettiMaxAngleVel,
     minScaleBegin = confettiMinScaleBegin,
     maxScaleBegin = confettiMaxScaleBegin,
     minScaleEnd = confettiMinScaleEnd,
     maxScaleEnd = confettiMaxScaleEnd,
-    minAngleEmitter = confettiMinAngleEmitter,
-    maxAngleEmitter = confettiMaxAngleEmitter,
     lifeTime = confettiLifeTime,
     gravityX = confettiGravityX,
     gravityY = confettiGravityY,
@@ -1445,12 +1635,12 @@ particles = {
       "THEME_15_WATERPARTICLE"
     },
     sheet = "",
-    --emitter_circle = {
+    emitter_circle = {
       minVel = 1800,
       maxVel = 2400,
       minAngleEmitter = 120,
-      maxAngleEmitter = 120,
-    --},
+      maxAngleEmitter = 120
+    },
     minAngleVel = 0,
     maxAngleVel = 0,
     minScaleBegin = 0.3,
@@ -1468,8 +1658,6 @@ particles = {
       "PARTICLE_GLASS"
     },
     sheet = "",
-    minVel = -800,
-    maxVel = 800,
     minAngleVel = 2,
     maxAngleVel = 8,
     minScaleBegin = 0.5,
@@ -1479,8 +1667,12 @@ particles = {
     lifeTime = 5,
     gravityX = 0,
     gravityY = 1600,
-    minAngle = -180,
-    maxAngle = 180
+    emitter_circle = {
+      minVel = -800,
+      maxVel = 800,
+      minAngleEmitter = -180,
+      maxAngleEmitter = 180
+    }
   },
   mattelPigBuff = {
     sprites = {
@@ -1488,8 +1680,6 @@ particles = {
       "SMOKE_BUFF_2"
     },
     sheet = "",
-    minVel = -50,
-    maxVel = 50,
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = featherSizeMedium,
@@ -1498,15 +1688,14 @@ particles = {
     maxScaleEnd = featherSizeMedium,
     lifeTime = lifeTimeRandom,
     gravityX = 0,
-    gravityY = -10
+    gravityY = -10,
+    emitter_circle = {minVel = -50, maxVel = 50}
   },
   mattelPigTears = {
     sprites = {
       "PARTICLE_CRY"
     },
     sheet = "",
-    minVel = -350,
-    maxVel = 350,
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = 1,
@@ -1515,7 +1704,8 @@ particles = {
     maxScaleEnd = 0,
     lifeTime = 3,
     gravityX = 0,
-    gravityY = 1200
+    gravityY = 1200,
+    emitter_circle = {minVel = -350, maxVel = 350}
   },
   totalDestructionExplosion = {
     sprites = {
@@ -1528,8 +1718,6 @@ particles = {
       "MATTEL_EXPLOSION_7"
     },
     sheet = "",
-    minVel = 0,
-    maxVel = 0,
     minAngleVel = 0,
     maxAngleVel = 0,
     minScaleBegin = 1,
@@ -1539,9 +1727,13 @@ particles = {
     lifeTime = 0.5,
     gravityX = 0,
     gravityY = 0,
-    minAngleEmitter = 0,
-    maxAngleEmitter = 0,
-    animation = "lifeTime"
+    animation = "lifeTime",
+    emitter_circle = {
+      minVel = 0,
+      maxVel = 0,
+      minAngleEmitter = 0,
+      maxAngleEmitter = 0
+    }
   },
   green_rocket = {
     sprites = {
@@ -1554,12 +1746,12 @@ particles = {
       "SUPERSEED_SEQUENCE_7"
     },
     sheet = "",
-    --emitter_box = {
+    emitter_box = {
       minVelX = -200,
       maxVelX = -200,
       minVelY = -100,
-      maxVelY = 100,
-    --},
+      maxVelY = 100
+    },
     minAngleVel = -featherSpinSpeed,
     maxAngleVel = featherSpinSpeed,
     minScaleBegin = featherSizeMedium * 0.3,

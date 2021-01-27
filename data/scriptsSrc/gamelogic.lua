@@ -3852,10 +3852,10 @@ function setGameMode(gameMode)
   currentGameMode = gameMode
   if currentGameMode == updateGame then
     setGameOn(true)
-    avoidCrystalBackgroundActivity(true)
+    --avoidCrystalBackgroundActivity(true)
   else
     setGameOn(false)
-    avoidCrystalBackgroundActivity(false)
+    --avoidCrystalBackgroundActivity(false)
   end
   if g_isAccelerometerControl then
     enableMotion(currentGameMode ~= updateGame)
@@ -5298,7 +5298,7 @@ function launchEagleBait()
     obj.angle = obj.angle + _G.math.pi * 2
   end
   setRotation(name, obj.angle)
-  setMaterial(name, objects.world[name].material)
+  --setMaterial(name, objects.world[name].material)
   if objects.world[name].texture ~= nil then
     local texture = blockTable.themes[name].texture
     setTexture(name, texture)
@@ -5966,7 +5966,7 @@ function loadLevelInternal(levelFileName)
           obj.angle = obj.angle + _G.math.pi * 2
         end
         setRotation(name, obj.angle)
-        setMaterial(name, objects.world[name].material)
+        --setMaterial(name, objects.world[name].material)
         if objects.world[name].texture ~= nil then
           local texture = blockTable.themes[currentTheme].texture
           setTexture(name, texture)
@@ -6011,7 +6011,7 @@ function loadLevelInternal(levelFileName)
       local bird = g_currentChallengeProgress.shotsQueue[x]
       local name = createObject(blockTable, bird, "challengeBird" .. birdsCounter .. bird, challengeBirdStartX * scaleFactor, challengeBirdStartY * scaleFactor)
       setRotation(name, 0)
-      setMaterial(name, objects.world[name].material)
+      --setMaterial(name, objects.world[name].material)
       objects.world[name].controllable = true
       if objects.world[name].texture ~= nil then
         local texture = blockTable.themes[currentTheme].texture
@@ -8396,7 +8396,7 @@ end
 function spawnBird(name, type, x, y)
   name = createObject(blockTable, type, name, x, y)
   setRotation(name, 0)
-  setMaterial(name, objects.world[name].material)
+  --setMaterial(name, objects.world[name].material)
   objects.world[name].controllable = true
   if objects.world[name].texture ~= nil then
     local texture = blockTable.themes[currentTheme].texture
@@ -10762,5 +10762,20 @@ function updateAvailable(isUpdateAvailable)
 end
 function useAds()
   return deviceModel == "android" and not settingsWrapper:isPremium()
+end
+function applyForce(name, dirX, dirY, objectX, objectY)
+  _G.table.insert(g_forceFunctions, function()
+    if objects.world[name] ~= nil then
+      applyForceNative(name, dirX, dirY, objectX, objectY)
+    end
+  end)
+end
+function clearLuaForceFunctions()
+  g_forceFunctions = {}
+end
+function applyForcesAtPhysicsStep()
+  for i, v in _G.ipairs(g_forceFunctions) do
+    v()
+  end
 end
 filename = "gamelogic.lua"
