@@ -3,7 +3,7 @@ This version uses decompiled lua files from android. (im using android lua files
 
 # Version
 Lua Files: 2.2.0
-Assets: 2.2.0
+Assets: 2.3.0
 AngryBirds.exe: 2.2.0
 
 # Setup

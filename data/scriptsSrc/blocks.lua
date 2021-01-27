@@ -2330,7 +2330,11 @@ blocks = {
     explosionForce = 20000,
     explosionDamageRadius = 100,
     explosionDamage = 1,
-    z_order = 999
+    z_order = 999,
+    collisionFunction = "mightyEagleCollision",--TODO
+    frozenFunction = "mightyEagleFrozen",
+    updateFunction = "updateMightyEagle",
+    collider_type = collider_types.mighty_eagle
   },
   BaitSardine = {
     friction = 0.25,
@@ -2361,7 +2365,11 @@ blocks = {
     destroyedSound = "light_destroyed",
     unselectionSound = "",
     specialty = "SUMMON_MIGHTY_EAGLE",
-    tutorialInfo = "TUTORIAL_8"
+    tutorialInfo = "TUTORIAL_8",
+    collisionFunction = "mightyEagleBaitCollision",--TODO
+    frozenFunction = "mightyEagleBaitFrozen",
+    updateFunction = "updateMightyEagleBait",
+    timerFunction = "mightyEagleAndBaitTimerUpdate"
   },
   GlobeBird = {
     definition = "GlobeBird",

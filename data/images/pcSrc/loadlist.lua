@@ -124,6 +124,16 @@ assetLoadList = {
         0
       }
     },
+	GREEN_UPSELL = {
+      {
+        "GREEN_UPSELL_ELEMENTS_1.dat",
+        0
+      },
+      {
+        "GREEN_UPSELL_COMPOSPRITES.dat",
+        1
+      }
+    },
     HUD = {
       {
         "HUD_INGAME_1.dat",
@@ -185,7 +195,7 @@ assetLoadList = {
         "LEVELSELECTION_SHEET_ALEX.dat",
         0
       },
-      {
+	  {
         "LEVELSELECTION_SHEET_GOLDEN.dat",
         0
       }
@@ -256,16 +266,6 @@ assetLoadList = {
       {
         "POPUPS_SHEET_1.dat",
         0
-      }
-    },
-    ROVIO_NEWS = {
-      {
-        "ROVIO_NEWS_SHEET_1.dat",
-        0
-      },
-      {
-        "ROVIO_NEWS_COMPOSPRITES.dat",
-        1
       }
     },
     SPLASHES = {
@@ -377,7 +377,7 @@ assetLoadList = {
         "THEME_06_PARALLAX_6.dat",
         0
       },
-      {
+	  {
         "THEME_06_THEME_6.dat",
         0
       },
