@@ -12,5 +12,4 @@ AngryBirds.exe: 2.2.0
 3. Run build&run.bat to build all scripts in scriptsSrc folder, loadlist.lua in images and to Run Game (run after every modification in scriptsSrc or loadlist.lua)
 
 # TODO
-- [ ] Port 2.3.0 Bad Piggies levels and assets
-- [ ] Port 2.3.0 scripts/scripts_common structure
+- Port 2.3.0 scripts/scripts_common structure
