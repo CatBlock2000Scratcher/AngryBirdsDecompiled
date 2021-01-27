@@ -1052,6 +1052,14 @@ gamelua.g_episodes = {
     decor_right = "LS_THEME_SURF_RIGHT",
     per_page_level_numbering = false,
     button = "BTN_SURFTURF",
+	reward_completion = {
+      sprite = "REWARD_SURFTURF",
+      type = "projectile"
+    },
+    reward_three_stars = {
+      sprite = "REWARD_SURFTURF_STAR",
+      type = "projectile"
+    },
     pages = {
       {
         folder_name = "surf",
@@ -1140,7 +1148,6 @@ gamelua.g_episodes = {
         level_button = "LS_LEVEL_BG_NORMAL_OPEN_7",
         layout = "grid",
         layout_params = {rows = 3, cols = 5},
-        locked = true,
         levels = {
           {name = "LevelS031"},
           {name = "LevelS032"},
@@ -1156,7 +1163,11 @@ gamelua.g_episodes = {
           {name = "LevelS042"},
           {name = "LevelS043"},
           {name = "LevelS044"},
-          {name = "LevelS045"}
+          {
+            name = "LevelS045",
+            clear_cutscene = "worldS3_complete",
+            episode_end = true
+          }
         }
       }
     }

@@ -95,6 +95,10 @@ assetLoadList = {
         "CUTSCENES_STORY_8_BG.dat",
         0
       },
+	  {
+        "CUTSCENES_STORY_GREEN.dat",
+        0
+      },
       {
         "CUTSCENES_COMPOSPRITES.dat",
         1
@@ -105,6 +109,10 @@ assetLoadList = {
       }
     },
     GOLDEN_EGGS = {
+	  {
+        "GOLDEN_EGGS_GRANDPA.dat",
+        0
+      },
       {
         "GOLDEN_EGGS_SHEET_1.dat",
         0
@@ -499,6 +507,32 @@ assetLoadList = {
       },
       {
         "THEME_13_COMPOSPRITES.dat",
+        1
+      }
+    },
+    THEME_15 = {
+      {
+        "THEME_15_PARALLAX_1_15.dat",
+        0
+      },
+      {
+        "THEME_15_PARALLAX_2_15.dat",
+        0
+      },
+      {
+        "THEME_15_PARALLAX_3_15.dat",
+        0
+      },
+      {
+        "THEME_15_THEME_15.dat",
+        0
+      },
+      {
+        "THEME_15_THEME_GROUND_15.dat",
+        0
+      },
+      {
+        "THEME_15_COMPOSPRITES.dat",
         1
       }
     },

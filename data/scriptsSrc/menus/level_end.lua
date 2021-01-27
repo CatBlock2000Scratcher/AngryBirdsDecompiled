@@ -1023,7 +1023,7 @@ function EpisodeComplete:init()
   self:addChild(reward_effect)
   local reward_sprite = ui.Image:new()
   reward_sprite.name = "rewardSprite"
-  reward_sprite:setImage("REWARD_" .. self.episode)
+  reward_sprite:setImage(g_episodes[self.episode].reward_completion and g_episodes[self.episode].reward_completion.sprite)
   self:addChild(reward_sprite)
   LevelEnd.init(self)
   local page_title = self:getChild("pageTitle")

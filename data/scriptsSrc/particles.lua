@@ -26,7 +26,8 @@ levelParticles = {
   "confettisBlueGreen",
   "confettisBlueSilver",
   "confettisGreenSilver",
-  "confettisBlueGreenSilver"
+  "confettisBlueGreenSilver",
+  "theme15rain"
 }
 particles = {
   smokeBuff = {
@@ -1438,6 +1439,29 @@ particles = {
     gravityY = confettiGravityY,
     minAngle = confettiMinAngle,
     maxAngle = confettiMaxAngle
+  },
+  theme15rain = {
+    sprites = {
+      "THEME_15_WATERPARTICLE"
+    },
+    sheet = "",
+    --emitter_circle = {
+      minVel = 1800,
+      maxVel = 2400,
+      minAngleEmitter = 120,
+      maxAngleEmitter = 120,
+    --},
+    minAngleVel = 0,
+    maxAngleVel = 0,
+    minScaleBegin = 0.3,
+    maxScaleBegin = 0.5,
+    minScaleEnd = 0.3,
+    maxScaleEnd = 0.5,
+    lifeTime = 2.5,
+    gravityX = 0,
+    gravityY = 0,
+    minAngle = 0,
+    maxAngle = 0
   },
   mattelSplashGlass = {
     sprites = {

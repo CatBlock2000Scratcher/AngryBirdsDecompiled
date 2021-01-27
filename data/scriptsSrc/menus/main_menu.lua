@@ -50,20 +50,20 @@ function MainMenuRoot:buildBirdList()
     end
     if settingsWrapper:isEpisodeThreeStarred(i) then
       _G.table.insert(g_bird_sprites, {
-        sprite = "REWARD_" .. i .. "_STAR",
+        sprite = g_episodes[i].reward_three_stars.sprite,
         reward = reward_type
       })
       _G.table.insert(g_bird_sprites, {
-        sprite = "REWARD_" .. i .. "_STAR",
+        sprite = g_episodes[i].reward_three_stars.sprite,
         reward = reward_type
       })
     elseif settingsWrapper:isThemeCompleted(total_worlds) then
       _G.table.insert(g_bird_sprites, {
-        sprite = "REWARD_" .. i,
+        sprite = g_episodes[total_worlds].reward_completion.sprite,
         reward = reward_type
       })
       _G.table.insert(g_bird_sprites, {
-        sprite = "REWARD_" .. i,
+        sprite = g_episodes[total_worlds].reward_completion.sprite,
         reward = reward_type
       })
     end

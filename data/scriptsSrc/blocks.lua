@@ -265,7 +265,7 @@ materials = {
   }
 }
 themes = {
-  settings = {keyCode = "T", themeAmount = 20},
+  settings = {keyCode = "T", themeAmount = 21},
   theme1 = {
     index = 1,
     music = "ambient_theme1",
@@ -1398,8 +1398,8 @@ themes = {
       }
     },
     color = {
-      r = 0,
-      g = 54,
+      r = 4,
+      g = 56,
       b = 123
     },
     groundColor = {
@@ -1422,27 +1422,28 @@ themes = {
       {
         "",
         "BACKGROUND_13_LAYER_1",
-        0.05,
+        0.1,
         1.5
       },
       {
         "",
         "BACKGROUND_13_LAYER_3",
-        0.1,
-        1.5,
+        0.25,
+        2,
         false,
-        600
+        800
       },
       {
         "",
         "BACKGROUND_13_LAYER_2",
-        0.175,
-        1.5
+        0.375,
+        2,
+		800
       },
       {
         "",
         "BACKGROUND_13_LAYER_5",
-        0.35,
+        0.65,
         1.5
       }
     },
@@ -1454,15 +1455,89 @@ themes = {
     },
     color = {
       r = 248,
-      g = 115,
-      b = 99
+      g = 114,
+      b = 98
     },
     groundColor = {
-      r = 32,
-      g = 76,
-      b = 1
+      r = 34,
+      g = 68,
+      b = 0
     },
     mainMenuScale = 2
+  },
+  theme21 = {
+    index = 21,
+    music = "rain_ambience",
+    graphicSetName = {
+	  "THEME_15",
+	  "BLOCKS_FB"
+	},
+    texture = "THEME_15_THEME_GROUND_15", 
+    bgLayers = {
+      {
+        "",
+        "INGAME_SKIES_15",
+        0.125,
+        2
+      },
+      --[[{
+        rect = {
+          r = 255,
+          g = 255,
+          b = 255,
+          a = 0
+        }
+      },]]
+      {
+        "",
+        "THEME_15_BG_LAYER_1",
+        0.25,
+        2
+      },
+      {
+        "",
+        "THEME_15_MASK",
+        0.25,
+        2
+      },
+      {
+        "",
+        "THEME_15_BG_LAYER_2",
+        0.45,
+        1.5
+      }
+    },
+    fgLayers = {
+      {
+        "",
+        "FOREGROUND_15_LAYER_1"
+      },
+      {
+        "",
+        "FOREGROUND_15_LAYER_2",
+        1.2
+      }
+    },
+    effects = {
+      {
+        type = "Thunder",
+        params = {
+          flash_layers = {2},
+          shadow_layers = {4}
+        }
+      }
+    },
+    color = {
+      r = 34,
+      g = 17,
+      b = 87
+    },
+    groundColor = {
+      r = 17,
+      g = 17,
+      b = 34
+    },
+    mainMenuScale = 2.5
   }
 }
 groups = {

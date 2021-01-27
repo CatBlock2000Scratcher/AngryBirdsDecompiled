@@ -818,11 +818,13 @@ gameluaMenuListener = {
         }
         eventManager:notify(credits_event)
       else
-        eventManager:notify({
-          id = events.EID_SCROLL_TO_EPISODE,
-          from = event.episode,
-          to = event.episode + 1
-        })
+        if _G.tonumber(event.episode) then
+          eventManager:notify({
+            id = events.EID_SCROLL_TO_EPISODE,
+            from = event.episode,
+            to = event.episode + 1
+          })
+        end
         local episode_event = {
           id = events.EID_CHANGE_SCENE,
           target = "EPISODE_SELECTION"
@@ -3115,6 +3117,12 @@ function createAssets()
     extension = "mp3",
     alwaysStream = true,
     clipName = "beach_ambience"
+  })
+  createAudio({
+    fileName = audioPath .. "/music/RainAmbience",
+    extension = "mp3",
+    alwaysStream = true,
+    clipName = "rain_ambience"
   })
   audioGroups = {
     bird_01_collision = {
@@ -5934,7 +5942,7 @@ function loadLevelInternal(levelFileName)
           settingsWrapper:setCurrentZoomLevelMainMenu(v0.mainMenuScale)
         end
         currentMusic = v0.music
-        currentMainMenuSong = "title_theme"
+        currentMainMenuSong = v0.menuMusic or "title_theme"
       end
     end
   end

@@ -1638,4 +1638,93 @@ worldS2_complete = {
   },
   {time = 7.5, action = "end"}
 }
+worldS3_complete = {
+  {
+    time = 0,
+    action = "fitheight",
+    image = "STORY_8_END"
+  },
+  {
+    time = 0,
+    action = "setreferencesize",
+    image = "STORY_8_END",
+    width = 2048,
+    height = 659
+  },
+  {
+    time = 0,
+    action = "playsound",
+    sound = "birds_outro",
+    loop = false,
+    volume = 1,
+    track = 1
+  },
+  {
+    time = 0,
+    action = "createsprite",
+    name = "background",
+    image = "STORY_8_END",
+    x = 0,
+    y = 0,
+    z = 0
+  },
+  {
+    time = 2.5,
+    action = "scroll",
+    duration = 5,
+    type = "cubic_in_out",
+    scroll_cursor = {x = 1, y = 0},
+    scroll_target = {
+      type = "sprite",
+      sprite = "background",
+      x = 1,
+      y = 0
+    }
+  },
+  {
+    time = 8,
+    action = "createsprite",
+    name = "eye",
+    image = "KINGPIG_EYE_2",
+    x = 0,
+    y = 0,
+    z = 1
+  },
+  {
+    time = 9,
+    action = "createsprite",
+    name = "eye",
+    image = "KINGPIG_EYE_3",
+    x = 0,
+    y = 0,
+    z = 1
+  },
+  {
+    time = 10.3,
+    action = "createsprite",
+    name = "eye",
+    image = "KINGPIG_EYE_4",
+    x = 0,
+    y = 0,
+    z = 1
+  },
+  {
+    time = 10.5,
+    action = "createsprite",
+    name = "eye",
+    image = "KINGPIG_EYE_3",
+    x = 0,
+    y = 0,
+    z = 1
+  },
+  {
+    time = 10.5,
+    action = "playsound",
+    sound = "piglette_oink_story",
+    loop = false,
+    volume = 1,
+    track = 0
+  },
+  {time = 12.5, action = "end"}
+}
 filename = "cutscenes.lua"
