@@ -52,6 +52,7 @@ function loadFiles()
   else
     loadLuaFileToObject(scriptPath .. "/episodes_free.lua", this, "_")
   end
+  loadLuaFile(scriptPath .. "/level_scripts.lua", "")
   if not isKidsVersion then
     loadLuaFile(scriptPath .. "/powerups.lua", "")
     loadLuaFile(scriptPath .. "/menus/MEPage.lua", "")
@@ -177,25 +178,6 @@ g_currentCursorName = "CURSOR_HAND_POINT"
 g_cursorEnabled = false
 g_updateAvailable = false
 g_usingGestureControls = false
-g_goldenEggKeyboardControl = deviceModel == "windows" or deviceModel == "osx" or g_isAccelerometerControl
-g_goldenEggKeys = {
-  "O",
-  "P",
-  "E",
-  "N"
-}
-g_goldenEggKeyCount = 0
-if deviceModel == "roku" then
-  g_goldenEggKeys = {
-    "KEY_GAMING_A"
-  }
-  g_rokuCursorVisible = true
-  g_isRokuSD = screenHeight < 720
-end
-if deviceModel == "freebox" then
-  g_rokuCursorVisible = true
-  g_goldenEggKeys = {"KEY_5"}
-end
 if isPremium then
   settingsWrapper:setPremium(true)
 end
@@ -645,53 +627,9 @@ gameluaMenuListener = {
       prepareChallengeQueue(event.challenge)
     end
     if event.id == events.EID_CHANGE_LEVEL then
-      g_currentChallenge = nil
-      g_currentChallengeProgress = nil
       local meta = event.data
-      if meta.levelName == "SOUNDBOARD1" or meta.levelName == "RADIO" or meta.levelName == "KEYBOARD" or meta.levelName == "SEQUENCER" or meta.levelName == "ACCORDION" then
-        settingsWrapper:setGoldenEggPlayed(meta.levelName)
-        eventManager:notify({
-          id = events.EID_GE_LEVEL_STARTED,
-          levelName = meta.levelName
-        })
-        local goto_level
-        if meta.levelName == "SOUNDBOARD1" then
-          goto_level = {
-            id = events.EID_CHANGE_SCENE,
-            target = soundboards.Soundboard:new()
-          }
-        elseif meta.levelName == "RADIO" then
-          goto_level = {
-            id = events.EID_CHANGE_SCENE,
-            target = soundboards.Radio:new()
-          }
-        elseif meta.levelName == "KEYBOARD" then
-          goto_level = {
-            id = events.EID_CHANGE_SCENE,
-            target = soundboards.Keyboard:new()
-          }
-        elseif meta.levelName == "SEQUENCER" then
-          goto_level = {
-            id = events.EID_CHANGE_SCENE,
-            target = soundboards.Sequencer:new()
-          }
-        elseif meta.levelName == "ACCORDION" then
-          goto_level = {
-            id = events.EID_CHANGE_SCENE,
-            target = soundboards.Accordion:new()
-          }
-        end
-        eventManager:notify({
-          id = events.EID_DO_LOADING,
-          items = {
-            function()
-              loadAssets({
-                "GOLDEN_EGGS"
-              })
-            end
-          },
-          completion_event = goto_level
-        })
+      if g_level_scripts[meta.levelName] and g_level_scripts[meta.levelName].onPrepareOverride then
+        g_level_scripts[meta.levelName].onPrepareOverride()
       else
         prepareLevel(meta, event.from)
       end
@@ -5540,131 +5478,6 @@ function drawLevelSelectionBackground(page)
   _G.res.drawSprite("", "LS_BACKGROUND", 0, 0, "LEFT", "TOP", _G.math.floor(screenWidth / 2), screenHeight)
   setRenderState(0, 0, 1, 1, 0)
 end
-function filterLoadedLevel()
-  if not startedFromEditor then
-    local goldenEgg = function(level)
-      return settingsWrapper:isGoldenEggUnlocked(level)
-    end
-    local boomerangBird = function(s)
-      return settings[s] == true
-    end
-    local filterItems = {
-      {
-        world = 4,
-        level = 7,
-        item = "ExtraGoldenEgg_1",
-        check = goldenEgg("LevelGE_5")
-      },
-      {
-        world = 5,
-        level = 19,
-        item = "ExtraGoldenEgg_1",
-        check = goldenEgg("LevelGE_3")
-      },
-      {
-        world = 8,
-        level = 15,
-        item = "ExtraGoldenEgg_1",
-        check = goldenEgg("LevelGE_8")
-      },
-      {
-        world = 6,
-        level = 4,
-        item = "ExtraBoomerangBird_1",
-        check = boomerangBird("boomerangBirdAchieved")
-      },
-      {
-        world = 9,
-        level = 5,
-        item = "ExtraBoomerangBird_1",
-        check = boomerangBird("boomerangBirdAchieved2")
-      },
-      {
-        world = 9,
-        level = 14,
-        item = "ExtraGoldenEgg_1",
-        check = goldenEgg("LevelGE_9")
-      },
-      {
-        world = 11,
-        level = 15,
-        item = "ExtraGoldenEgg_1",
-        check = goldenEgg("LevelGE_11")
-      },
-      {
-        world = 13,
-        level = 10,
-        item = "ExtraGoldenEgg_1",
-        check = goldenEgg("LevelGE_17")
-      },
-      {
-        world = 13,
-        level = 12,
-        item = "ExtraSuperBowl_2",
-        check = goldenEgg("LevelGE_19")
-      },
-      {
-        world = 14,
-        level = 4,
-        item = "ExtraGoldenEgg_1",
-        check = goldenEgg("LevelGE_18")
-      },
-      {
-        world = 15,
-        level = 12,
-        item = "ExtraGoldenEgg_1",
-        check = goldenEgg("LevelGE_20")
-      },
-      {
-        world = 16,
-        level = 9,
-        item = "ExtraGoldenEgg_1",
-        check = goldenEgg("LevelGE_21")
-      },
-      {
-        world = 17,
-        level = 12,
-        item = "ExtraTreasureChest_1",
-        check = goldenEgg("LevelGE_23")
-      },
-      {
-        world = 18,
-        level = 6,
-        item = "ExtraGoldenEgg_1",
-        check = goldenEgg("LevelGE_24")
-      }
-    }
-    for i = 1, #filterItems do
-      if currentWorldNumber == filterItems[i].world and currentLevelNumberInTheme == filterItems[i].level and filterItems[i].check then
-        loadedObjects.world[filterItems[i].item] = nil
-        for k, v in _G.pairs(loadedObjects.joints) do
-          if v.end1 == filterItems[i].item or v.end2 == filterItems[i].item then
-            loadedObjects.joints[k] = nil
-          end
-        end
-      end
-    end
-    if currentEpisode == "G" and currentLevelNumber == 20 then
-      local time = getCurrentTime()
-      local center = loadedObjects.world.StaticBlockTheme17_06_1
-      local minutes1 = loadedObjects.world.WoodBlock1_1
-      local minutes2 = loadedObjects.world.WoodBlock1_2
-      local seconds = loadedObjects.world.LightBlock1_1
-      if center and minutes1 and minutes2 and seconds then
-        local m_radius = _G.math.sqrt(_G.math.pow(minutes1.x - center.x, 2) + _G.math.pow(minutes1.y - center.y, 2))
-        local m_angle = (time.minutes / 60 + time.seconds / 3600) * _G.math.pi * 2 - _G.math.pi * 0.5
-        minutes1.x = center.x + _G.math.cos(m_angle) * m_radius
-        minutes1.y = center.y + _G.math.sin(m_angle) * m_radius
-        minutes2.x = minutes1.x
-        minutes2.y = minutes1.y
-        local s_radius = _G.math.sqrt(_G.math.pow(seconds.x - center.x, 2) + _G.math.pow(seconds.y - center.y, 2))
-        local s_angle = time.seconds / 60 * _G.math.pi * 2 - _G.math.pi * 0.5
-        seconds.x = center.x + _G.math.cos(m_angle) * s_radius
-        seconds.y = center.y + _G.math.sin(m_angle) * s_radius
-      end
-    end
-  end
-end
 function showRewardPopup(type, params)
   local popup
   if type == "GOLDEN_EGG" then
@@ -5847,7 +5660,6 @@ function loadLevelInternal(levelFileName)
   levelLeftEdge = 100000
   levelRightEdge = -100000
   g_challengeHudTimer = 0
-  g_goldenEggKeyCount = 0
   g_skip_to_level_end = false
   g_skip_wait_for_moving_objects = false
   birdsCounter = 0
@@ -5921,7 +5733,9 @@ function loadLevelInternal(levelFileName)
   objects.levelParticles = {}
   loadLevel(levelFileName)
   print(" - - - Level loaded \n")
-  filterLoadedLevel()
+  if g_level_scripts[levelName] and g_level_scripts[levelName].onLoadLevel and not startedFromEditor then
+    g_level_scripts[levelName].onLoadLevel()
+  end
   print(" - - - Filter loaded level done \n")
   if loadedObjects == nil then
     for k0, v0 in _G.pairs(blockTable.themes) do
@@ -6696,23 +6510,13 @@ function skipToLevelEnd()
   })
 end
 function beforeLevelEnding(dt)
-  if showBoomerangBirdPopup == true and levelCompleteTimer > 0 and levelCompleteTimer - dt <= 0 then
-    showBoomerangBirdPopup = false
-    levelCompleteTimer = levelCompleteTimer + 3.6
-    eventManager:notify({
-      id = events.EID_BOOMERANG_BIRD_POPUP
-    })
-    if currentLevelNumberInTheme == 4 and currentWorldNumber == 6 then
-      settingsWrapper:setBoomerangBirdAchieved()
-    elseif currentLevelNumberInTheme == 5 and currentWorldNumber == 9 then
-      settingsWrapper:setBoomerangBird2Achieved()
+  if not g_before_level_end_script_called then
+    g_before_level_end_script_called = true
+    if g_level_scripts[levelName] and g_level_scripts[levelName].onBeforeLevelEnding then
+      g_level_scripts[levelName].onBeforeLevelEnding()
     end
-    eventManager:notify({
-      id = events.EID_BOOMERANG_BIRD_POPUP_SHOWN
-    })
-  else
-    levelCompleteTimer = levelCompleteTimer - dt
   end
+  levelCompleteTimer = levelCompleteTimer - dt
 end
 function initLevelComplete()
   eventManager:notify({
@@ -6749,8 +6553,8 @@ function initLevelComplete()
   if eagleBaitLaunched then
     levelCompleteTimer = 2
   end
-  if currentWorldNumber == 6 and currentLevelNumberInTheme == 4 and settingsWrapper:isBoomerangBirdAchieved() ~= true or currentWorldNumber == 9 and currentLevelNumberInTheme == 5 and settingsWrapper:isBoomerangBird2Achieved() ~= true then
-    showBoomerangBirdPopup = true
+  if g_level_scripts[levelName] and g_level_scripts[levelName].onInitLevelComplete then
+    g_level_scripts[levelName].onInitLevelComplete()
   end
   g_level_completing = true
 end
@@ -6920,18 +6724,8 @@ function updateGame(dt, time)
     setWorldScale(1)
     worldScale = 1
   end
-  if g_goldenEggKeys[g_goldenEggKeyCount + 1] and keyPressed[g_goldenEggKeys[g_goldenEggKeyCount + 1]] and currentWorldNumber == 1 and currentLevelNumberInTheme == 8 then
-    local treasure_chest = objects.world.ExtraTreasureChest_1
-    if treasure_chest ~= nil then
-      g_goldenEggKeyCount = g_goldenEggKeyCount + 1
-    end
-  end
-  if (doubleClick == true and not g_goldenEggKeyboardControl or g_goldenEggKeyCount == #g_goldenEggKeys and g_goldenEggKeyboardControl) and currentWorldNumber == 1 and currentLevelNumberInTheme == 8 then
-    treasureChest = objects.world.ExtraTreasureChest_1
-    if treasureChest ~= nil and (distance(cursorPhysics.x, cursorPhysics.y, treasureChest.x, treasureChest.y) < 2.5 or g_goldenEggKeyboardControl) then
-      goldenEggAchieved("LevelGE_15")
-      additionalPopupPageDelay = false
-    end
+  if g_level_scripts[levelName] and g_level_scripts[levelName].onUpdate then
+    g_level_scripts[levelName].onUpdate(dt, time)
   end
   if levelStartTimer < 1 or 6 < levelStartTimer then
     levelStartTimer = levelStartTimer + dt
@@ -8246,68 +8040,8 @@ function removeBlocks()
         _G.res.playAudio(getAudioName(destroySound), 0.7, false, 3)
       end
       updateDestroyedBlocksValues(v)
-      if eagleBaitLaunched ~= true then
-        if currentLevelNumberInTheme == 2 and currentWorldNumber == 2 and v.name == "ExtraBeachBall_1" then
-          goldenEggAchieved("LevelGE_2")
-        end
-        if currentLevelNumberInTheme == 14 and currentWorldNumber == 6 and v.name == "StaticBalloon03_2" then
-          goldenEggAchieved("LevelGE_6")
-        end
-        if currentLevelNumberInTheme == 7 and currentWorldNumber == 4 and v.name == "ExtraGoldenEgg_1" then
-          goldenEggAchieved("LevelGE_5")
-        end
-        if currentLevelNumberInTheme == 19 and currentWorldNumber == 5 and v.name == "ExtraGoldenEgg_1" then
-          goldenEggAchieved("LevelGE_3")
-        end
-        if currentLevelNumberInTheme == 15 and currentWorldNumber == 8 and v.name == "ExtraGoldenEgg_1" then
-          goldenEggAchieved("LevelGE_8")
-        end
-        if currentLevelNumberInTheme == 14 and currentWorldNumber == 9 and v.name == "ExtraGoldenEgg_1" then
-          goldenEggAchieved("LevelGE_9")
-        end
-        if currentLevelNumberInTheme == 3 and currentWorldNumber == 10 and v.name == "ExtraRubberDuck_1" then
-          goldenEggAchieved("LevelGE_10")
-        end
-        if currentLevelNumberInTheme == 15 and currentWorldNumber == 11 and v.name == "ExtraGoldenEgg_1" then
-          goldenEggAchieved("LevelGE_11")
-        end
-        if currentLevelNumberInTheme == 12 and currentWorldNumber == 12 and v.name == "ExtraHolyGrail_4" then
-          goldenEggAchieved("LevelGE_16")
-        end
-        if currentLevelNumberInTheme == 10 and currentWorldNumber == 13 and v.name == "ExtraGoldenEgg_1" then
-          goldenEggAchieved("LevelGE_17")
-        end
-        if currentLevelNumberInTheme == 4 and currentWorldNumber == 14 and v.name == "ExtraGoldenEgg_1" then
-          goldenEggAchieved("LevelGE_18")
-        end
-        if currentLevelNumberInTheme == 12 and currentWorldNumber == 13 and v.name == "ExtraSuperBowl_2" then
-          goldenEggAchieved("LevelGE_19")
-        end
-        if currentLevelNumberInTheme == 12 and currentWorldNumber == 15 and v.name == "ExtraGoldenEgg_1" then
-          goldenEggAchieved("LevelGE_20")
-        end
-        if currentLevelNumberInTheme == 9 and currentWorldNumber == 16 and v.name == "ExtraGoldenEgg_1" then
-          goldenEggAchieved("LevelGE_21")
-        end
-        if currentLevelNumberInTheme == 12 and currentWorldNumber == 17 and v.name == "ExtraTreasureChest_1" then
-          goldenEggAchieved("LevelGE_23")
-        end
-        if currentLevelNumberInTheme == 6 and currentWorldNumber == 18 and v.name == "ExtraGoldenEgg_1" then
-          goldenEggAchieved("LevelGE_24")
-        end
-        if currentLevelNumberInTheme == 15 and currentWorldNumber == 18 and v.name == "SPECIAL_CAKE_1_1" then
-          if not settingsWrapper:isCakeCollected() then
-            settingsWrapper:setCakeCollected()
-            eventManager:notify({
-              id = events.EID_REWARD_POPUP,
-              sprite = "GOLDEN_EGG_SPECIAL_CAKE",
-              sound = "star_collect"
-            })
-          end
-          eventManager:notify({
-            id = events.EID_CAKE_COLLECTED
-          })
-        end
+	  if g_level_scripts[levelName] and g_level_scripts[levelName].onRemoveBlock then
+        g_level_scripts[levelName].onRemoveBlock(v)
       end
       addParticles(k, particle, particleAmount, false, false)
       removeObject(k)
