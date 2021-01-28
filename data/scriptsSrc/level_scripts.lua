@@ -418,5 +418,5 @@ g_level_scripts.LevelGE_20 = {
     end
   end
 }
-loadLuaFile(scriptPath .. "/subsystems/eggdefender/EggDefender.lua", "")
+--loadLuaFile(scriptPath .. "/subsystems/eggdefender/EggDefender.lua", "")
 filename = "level_scripts.lua"

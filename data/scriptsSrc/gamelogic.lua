@@ -109,8 +109,9 @@ function loadFiles()
   end
 end
 loadFiles()
-loadlist = {}
 postHighscores = true
+g_forceFunctions = {}
+loadlist = {}
 subSystemsList = {}
 processManager = ProcessManager:new()
 g_useMp3Sound = true
