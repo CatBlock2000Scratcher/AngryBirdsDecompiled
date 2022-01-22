@@ -176,7 +176,7 @@ end
 g_crystalEnabled = false
 g_allowLowQualityGraphics = deviceModel == "android" and not isHDVersion
 g_currentCursorName = "CURSOR_HAND_POINT"
-g_cursorEnabled = false
+g_cursorEnabled = true
 g_updateAvailable = false
 g_usingGestureControls = false
 if isPremium then
